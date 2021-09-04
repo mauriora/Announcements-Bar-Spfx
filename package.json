@@ -1,0 +1,23 @@
+{
+    "name": "@mauriora/webpart-example-solution",
+    "version": "0.0.1",
+    "repository": {
+        "url": "https://github.com/mauriora/screen-controller-mono-repo"
+    },
+    "private": true,
+    "workspaces": [
+        "shared/**",
+        "app/**"
+    ],
+    "scripts": {
+        "serve": "yarn workspace @mauriora/rateable-announcements serve",
+        "build-app": "yarn workspace @mauriora/rateable-announcements build",
+        "build-shared": "yarn workspace @mauriora/controller-sharepoint-list build && yarn workspace @mauriora/utils-spfx-controls-react build",
+        "clean-node_modules": "rmdir ./node_modules && lerna clean",
+        "clean-all": "yarn workspace @mauriora/rateable-announcements clean && yarn workspace @mauriora/controller-sharepoint-list clean && yarn workspace @mauriora/utils-spfx-controls-react clean"
+    },
+    "devDependencies": {
+        "lerna": "^4.0.0"
+    },
+    "dependencies": {}
+}
