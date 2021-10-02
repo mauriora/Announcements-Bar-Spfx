@@ -38,19 +38,23 @@ You should have the following installed:
 
 ### Minimal path to awesomeness
 
-### Create the content type
+#### Create the content type
 
-Create a new content type as child of the builtin Announcement.
+![Content type hierarchy diagram](./docs/Content-Type.svg)
+
+Create a new content type as child of the builtin `Announcement`, e.g. `Announcement Extended`.
 Add from existing site columns:
 
-- Owner (ReportOwner) ?
-- Start Date (StartDate)
-- Urgent ?
-- URL (URL)
+- Owner (`ReportOwner`)
+- Start Date (`StartDate`)
+- `URL`
 
-If you can't create content-types, add the above, after you created the list with the Announcements content type. If you can find all the columns in existing ones, some features might be missing. You can add them manually.
+> `Urgent` (create as YesNo if it doesn't exist)
 
-### Create the list
+If you can't create content-types, add the `Announcement Extended` fields manually to your list, **after** you created it with the builtin `Announcements` content type.
+If you can't find all the site columns in existing ones, then you can add them manually.
+
+#### Create the list
 
 1. To be able to deploy the extension tenant wide without configuration, create the lists *__Announcements__*  and *__AcknowledgedAnnouncements__* on the site *__/sites/news__*
 2. Open *__SiteContent__* on the site that will host the _Announcements_ list containing the announcements
@@ -59,16 +63,36 @@ If you can't create content-types, add the above, after you created the list wit
     - Advanced settings
         - Enable management of content types
         - Disable attachments
+    - Rating settings (this seems to only appear on team sites)
+        - Rating Settings: **Yes** or (No if you want to disable ratings)
+        - Which voting/rating experience you would like to enable for this list?
+            - Likes if you want to show the Thumbs icon and count
+            - Star Ratings if you want to show the 5-star rating
     - Add from existing content types
         - Add your previous created content type. If it doesn't show, wait for up to 4 hours
     - Click on the default item content type
         - delete this content type
-    - Rating settings (this is seems to only appear on team sites)
-        - Rating Settings: Yes
-        - Which voting/rating experience you would like to enable for this list?: Likes
+5. The Coulmns should look like:
 
-5. Create the _acknowledged_ list
-6. In the settings:
+    | Column | Type | Used in | Comment |
+    |--------|------|---------|---------|
+    | Body    | Multiple lines of text | Announcement Extended | |
+    | Created | Date and Time | | |
+    | Expires | Date and Time | Announcement Extended | |
+    | Modified | Date and Time | | |
+    | Number of Likes | Number of Likes | If you have/had like ratings enabled |
+    | Number of Ratings | Number of Ratings | If you have/had star ratings enabled |
+    | Owner | Person or Group | Announcement Extended | |
+    | Rating (0-5) | Rating (0-5) | | If you have/had star ratings enabled |
+    | Start Date | Date and Time | Announcement Extended | |
+    | Title | Single line of text | Announcement Extended | |
+    | Urgent | Yes/No | Announcement Extended | |
+    | URL | Hyperlink or Picture | Announcement Extended | |
+    | Created By | Person or Group | | |
+    | Modified By | Person or Group | | |
+    
+6. Create the _acknowledged_ list
+7. In the settings:
     - Advanced settings
         - **Read access** select `Read items that were created by the user`
         - **Create and Edit access** select `Create items and edit items that were created by the user`
@@ -77,16 +101,15 @@ If you can't create content-types, add the above, after you created the list wit
 ### Serve the extension
 
 ```shell
-yarn global add lerna
 git clone --recurse-submodules https://github.com/mauriora/Rateable-Announcements-Solution.git
 cd Rateable-Announcements-Solution
-lerna bootstrap
+yarn install
 code .
 ```
 
 Edit `app\Rateable-Announcements-Extension\config\serve.json`
 
-- set *pageUrl* the spage you want to test your extension on
+- set *pageUrl* to the spage you want to test your extension on
 - in properties, set listname and siteurl
 
 open a terminal in the solution (root) folder
@@ -123,11 +146,11 @@ For the likes to work, the list needs to be on a site with option to enable rati
 
         Depending on your pnp / powershell version, the `ClientSideComponentProperties` need to be escaped different:
 
-        ``Add-PnPCustomAction -Name "Mauri-Ora-Rateable-Announcements" -Title "Mauri-Ora-Rateable-Announcements" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "188a73d9-a68e-381e-4625-a5f0cf7c0024" -ClientSideComponentProperties "{'listName': 'Announcements', 'acknowledgedListName': 'AcknowledgedAnnouncements', 'siteUrl': '/sites/News'}"``
+        ``Add-PnPCustomAction -Name "Mauri-Ora-Rateable-Announcements" -Title "Mauri-Ora-Rateable-Announcements" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "188a73d9-a68e-381e-4625-a5f0cf7c0024" -ClientSideComponentProperties "{ `"listName`": `"Announcements`", `"acknowledgedListName`": `"AcknowledgedAnnouncements`", `"siteUrl`": `"/sites/News`"}"``
 
         or
 
-        ``Add-PnPCustomAction -Name "Mauri-Ora-Rateable-Announcements" -Title "Mauri-Ora-Rateable-Announcements" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "188a73d9-a68e-381e-4625-a5f0cf7c0024" -ClientSideComponentProperties "{ `"listName`": `"Announcements`", `"acknowledgedListName`": `"AcknowledgedAnnouncements`", `"siteUrl`": `"/sites/News`"}"``
+        ``Add-PnPCustomAction -Name "Mauri-Ora-Rateable-Announcements" -Title "Mauri-Ora-Rateable-Announcements" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "188a73d9-a68e-381e-4625-a5f0cf7c0024" -ClientSideComponentProperties "{'listName': 'Announcements', 'acknowledgedListName': 'AcknowledgedAnnouncements', 'siteUrl': '/sites/News'}"``
 
         If you have issues, check the browser logs, "Announcements onInit" logs an object with an properties object containing _listName_, _acknowledgedListName_ and _siteUrl_
 
