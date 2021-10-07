@@ -90,7 +90,7 @@ If you can't find all the site columns in existing ones, then you can add them m
     | URL | Hyperlink or Picture | Announcement Extended | |
     | Created By | Person or Group | | |
     | Modified By | Person or Group | | |
-    
+
 6. Create the _acknowledged_ list
 7. In the settings:
     - Advanced settings
@@ -103,7 +103,7 @@ If you can't find all the site columns in existing ones, then you can add them m
 ```shell
 git clone --recurse-submodules https://github.com/mauriora/Rateable-Announcements-Solution.git
 cd Rateable-Announcements-Solution
-yarn install
+yarn
 code .
 ```
 
@@ -125,7 +125,7 @@ a browser will open and navigate to *pageUrl*
 
 For the likes to work, the list needs to be on a site with option to enable ratings on lists.
 
-1. In a solution terminal execute `yarn build-app`
+1. In a solution terminal execute `yarn build-release`
 2. [browse to the sharepoint app store on *YOUR-TENANT*](https://YOUR-TENANT.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx)
 3. Click **Upload**
 4. Click **Choose files**
