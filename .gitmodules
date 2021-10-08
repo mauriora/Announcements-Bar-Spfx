@@ -10,3 +10,7 @@
 	path = shared/Utils-SPFx-Controls-React
 	url = https://github.com/mauriora/Utils-SPFx-Controls-React.git
 	branch = main
+[submodule "shared/Model-Announcement-Extended"]
+	path = shared/Model-Announcement-Extended
+	url = https://github.com/mauriora/Model-Announcement-Extended.git
+	branch = main
