@@ -156,6 +156,26 @@ For the likes to work, the list needs to be on a site with option to enable rati
 
 13. Create a page and add **YOUR-EXTENSION**
 
+## Caveats
+
+### Blank page for installation error
+
+To see installation errors, go to `Site content` using the `classic experience`.
+Locate the failed package and:
+
+- click the more menu (`...`)
+- Click `DETAILS`
+- In the `Errors` section
+  - Click on the number to the right of `Install Errors`
+  - A baloon popup should appear showing the error(s)
+
+If you see a blank page, open `PowerShell` with `pnp` and execute:
+
+```shell
+    Connect-PnPOnline -Url "https://<YOURTENANT>-admin.sharepoint.com" -interactive
+    Set-PnPTenantSite -Identity "https://<YOURTENANT>.sharepoint.com/sites/<YOURSITE>" -DenyAddAndCustomizePages:$false
+```
+
 ## Contribute
 
 Use the minmal path to awesomeness and please create a branch for your contribution.
