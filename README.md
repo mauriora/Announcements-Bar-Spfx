@@ -203,3 +203,8 @@ Then do a pull request to merge your branch into the main branch.
    - sharepoint/assets/
       - elements.xml
       - ClientSideInstance.xml
+
+## Notes
+
+
+CustomAction, ClientWebPart, ClientSideComponent, ClientSideComponentInstance, Field, ContentType, ListInstance, Module, PropertyBag
