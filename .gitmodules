@@ -14,3 +14,11 @@
 	path = shared/Model-Announcement-Extended
 	url = https://github.com/mauriora/Model-Announcement-Extended.git
 	branch = main
+[submodule "app/Rateable-announcements-model-deployment"]
+	path = app/Rateable-announcements-model-deployment
+	url = https://github.com/mauriora/Rateable-announcements-model-deployment.git
+	branch = main
+[submodule "shared/Spfx-Packaging"]
+	path = shared/Spfx-Packaging
+	url = https://github.com/mauriora/Spfx-Packaging.git
+	branch = main

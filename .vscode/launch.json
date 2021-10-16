@@ -1,0 +1,35 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Bundle",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            "args": ["bundle","--ship"],
+            "cwd": "${workspaceRoot}/app/Rateable-announcements-model-deployment",
+            "runtimeArgs": [
+                "--nolazy",
+                "--inspect"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Package",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "stopOnEntry": false,
+            "args": ["package-solution","--ship"],
+            "cwd": "${workspaceRoot}/app/Rateable-announcements-model-deployment",
+            "runtimeArgs": [
+                "--nolazy",
+                "--inspect"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
+
