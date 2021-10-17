@@ -22,3 +22,15 @@
 	path = shared/Spfx-Packaging
 	url = https://github.com/mauriora/Spfx-Packaging.git
 	branch = main
+[submodule "shared/Package-Tools"]
+	path = shared/Package-Tools
+	url = https://github.com/mauriora/Package-Tools.git
+	branch = main
+[submodule "shared/eslint-config-react"]
+	path = shared/eslint-config-react
+	url = https://github.com/mauriora/eslint-config-react.git
+	branch = main
+[submodule "shared/eslint-config-ts"]
+	path = shared/eslint-config-ts
+	url = https://github.com/mauriora/eslint-config-ts.git
+	branch = main

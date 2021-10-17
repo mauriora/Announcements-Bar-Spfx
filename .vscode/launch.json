@@ -3,7 +3,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Bundle",
+            "name": "gulp Bundle",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
@@ -17,7 +17,7 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Package",
+            "name": "gulp Package",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
