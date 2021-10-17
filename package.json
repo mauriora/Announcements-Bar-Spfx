@@ -1,6 +1,6 @@
 {
     "name": "@mauriora/rateable-announcements-solution",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "repository": {
         "url": "https://github.com/mauriora/Rateable-Announcements-Solution.git"
     },
@@ -14,11 +14,15 @@
         "lint-app": "yarn workspace @mauriora/rateable-announcements lint",
         "build-debug": "yarn workspace @mauriora/rateable-announcements build-debug",
         "build-release": "yarn workspace @mauriora/rateable-announcements build-release",
+        "clean-app": "yarn workspace @mauriora/rateable-announcements clean",
         "build-shared": "yarn workspace @mauriora/controller-sharepoint-list build && yarn workspace @mauriora/utils-spfx-controls-react build && yarn workspace @mauriora/model-announcement-extended build",
         "clean-shared": "yarn workspace @mauriora/controller-sharepoint-list clean && yarn workspace @mauriora/utils-spfx-controls-react clean && yarn workspace @mauriora/model-announcement-extended clean",
         "lint-shared": "yarn workspace @mauriora/controller-sharepoint-list lint && yarn workspace @mauriora/utils-spfx-controls-react lint && yarn workspace @mauriora/model-announcement-extended lint",
         "clean-node-modules": "rimraf ./shared/*/node_modules && rimraf app/*/node_modules && rimraf ./node_modules",
-        "clean-all": "yarn workspace @mauriora/rateable-announcements clean && yarn clean-shared"
+        "clean-all": "yarn clean-app && yarn clean-shared",
+        "build-all": "yarn build-shared && yarn build-release",
+        "rebuild-all": "yarn clean-all && yarn build-all",
+        "clean-az": "yarn clean-all && yarn clean-node-modules && rm yarn.lock"
     },
     "devDependencies": {
         "rimraf": "^3.0.2",
