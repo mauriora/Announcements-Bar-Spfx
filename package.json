@@ -22,7 +22,8 @@
         "clean-all": "yarn clean-app && yarn clean-shared",
         "build-all": "yarn build-shared && yarn build-release",
         "rebuild-all": "yarn clean-all && yarn build-all",
-        "clean-az": "yarn clean-all && yarn clean-node-modules && rm yarn.lock"
+        "clean-az": "yarn clean-all && rimraf yarn.lock && yarn clean-node-modules",
+        "rebuild-az": "yarn clean-az && yarn install && yarn build-all"
     },
     "devDependencies": {
         "rimraf": "^3.0.2",
