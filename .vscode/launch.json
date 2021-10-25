@@ -9,7 +9,7 @@
             "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
             "stopOnEntry": false,
             "args": ["bundle","--ship"],
-            "cwd": "${workspaceRoot}/app/Rateable-announcements-model-deployment",
+            "cwd": "${workspaceRoot}/app/Announcements-Model-Deployment",
             "runtimeArgs": [
                 "--nolazy",
                 "--inspect"
@@ -23,7 +23,7 @@
             "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
             "stopOnEntry": false,
             "args": ["package-solution","--ship"],
-            "cwd": "${workspaceRoot}/app/Rateable-announcements-model-deployment",
+            "cwd": "${workspaceRoot}/app/Announcements-Model-Deployment",
             "runtimeArgs": [
                 "--nolazy",
                 "--inspect"

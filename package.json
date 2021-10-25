@@ -1,8 +1,8 @@
 {
-    "name": "@mauriora/rateable-announcements-solution",
-    "version": "0.0.4",
+    "name": "@mauriora/announcements-bar-spfx",
+    "version": "0.1.0",
     "repository": {
-        "url": "https://github.com/mauriora/Rateable-Announcements-Solution.git"
+        "url": "https://github.com/mauriora/Announcements-Bar-Spfx.git"
     },
     "private": true,
     "workspaces": [
@@ -10,18 +10,24 @@
         "app/**"
     ],
     "scripts": {
-        "serve": "yarn workspace @mauriora/rateable-announcements serve",
-        "lint-app": "yarn workspace @mauriora/rateable-announcements lint",
-        "build-debug": "yarn workspace @mauriora/rateable-announcements build-debug",
-        "build-release": "yarn workspace @mauriora/rateable-announcements build-release",
-        "clean-app": "yarn workspace @mauriora/rateable-announcements clean",
+        "serve": "yarn workspace @mauriora/announcements-bar-extension serve",
+        "lint-app": "yarn workspace @mauriora/announcements-bar-extension lint",
+        "build-debug": "yarn workspace @mauriora/announcements-bar-extension build-debug",
+        "build-release": "yarn workspace @mauriora/announcements-bar-extension build-release",
+        "clean-app": "yarn workspace @mauriora/announcements-bar-extension clean",
+
+        "build-model": "yarn workspace @mauriora/announcements-model-deployment build",
+        "clean-model": "yarn workspace @mauriora/announcements-model-deployment clean",
         "build-shared": "yarn workspace @mauriora/controller-sharepoint-list build && yarn workspace @mauriora/utils-spfx-controls-react build && yarn workspace @mauriora/model-announcement-extended build",
+
         "clean-shared": "yarn workspace @mauriora/controller-sharepoint-list clean && yarn workspace @mauriora/utils-spfx-controls-react clean && yarn workspace @mauriora/model-announcement-extended clean",
         "lint-shared": "yarn workspace @mauriora/controller-sharepoint-list lint && yarn workspace @mauriora/utils-spfx-controls-react lint && yarn workspace @mauriora/model-announcement-extended lint",
         "clean-node-modules": "rimraf ./shared/*/node_modules && rimraf app/*/node_modules && rimraf ./node_modules",
-        "clean-all": "yarn clean-app && yarn clean-shared",
-        "build-all": "yarn build-shared && yarn build-release",
+
+        "clean-all": "yarn clean-app && yarn clean-model && yarn clean-shared",
+        "build-all": "yarn build-shared && yarn build-model && yarn build-release",
         "rebuild-all": "yarn clean-all && yarn build-all",
+
         "clean-az": "yarn clean-all && rimraf yarn.lock && yarn clean-node-modules",
         "rebuild-az": "yarn clean-az && yarn install && yarn build-all"
     },

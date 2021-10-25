@@ -1,7 +1,3 @@
-[submodule "app/Rateable-Announcements-Extension"]
-	path = app/Rateable-Announcements-Extension
-	url = https://github.com/mauriora/Rateable-Announcements-Extension.git
-	branch = main
 [submodule "shared/Controller-SharePoint-List"]
 	path = shared/Controller-SharePoint-List
 	url = https://github.com/mauriora/Controller-SharePoint-List.git
@@ -13,10 +9,6 @@
 [submodule "shared/Model-Announcement-Extended"]
 	path = shared/Model-Announcement-Extended
 	url = https://github.com/mauriora/Model-Announcement-Extended.git
-	branch = main
-[submodule "app/Rateable-announcements-model-deployment"]
-	path = app/Rateable-announcements-model-deployment
-	url = https://github.com/mauriora/Rateable-announcements-model-deployment.git
 	branch = main
 [submodule "shared/Spfx-Packaging"]
 	path = shared/Spfx-Packaging
@@ -33,4 +25,12 @@
 [submodule "shared/eslint-config-ts"]
 	path = shared/eslint-config-ts
 	url = https://github.com/mauriora/eslint-config-ts.git
+	branch = main
+[submodule "app/Announcements-Bar-Extension"]
+	path = app/Announcements-Bar-Extension
+	url = https://github.com/mauriora/Announcements-Bar-Extension.git
+	branch = main
+[submodule "app/Announcements-Model-Deployment"]
+	path = app/Announcements-Model-Deployment
+	url = https://github.com/mauriora/Announcements-Model-Deployment.git
 	branch = main

@@ -1,4 +1,4 @@
-# Rateable-Announcements Sharepoint extension
+# Announcements bar Sharepoint extension
 
 ## Introduction
 
@@ -11,6 +11,7 @@ This one hopefully illustrates:
 - create a model extended from existing SharePoint Announcements for the SharePoint access
 - use out of the box features like likes, comments
 - little specific code needed
+- deploy a list and content type
 
 ## Table of contents
 
@@ -56,58 +57,64 @@ If you can't find all the site columns in existing ones, then you can add them m
 
 #### Create the list
 
-1. To be able to deploy the extension tenant wide without configuration, create the lists *__Announcements__*  and *__AcknowledgedAnnouncements__* on the site *__/sites/news__*
-2. Open *__SiteContent__* on the site that will host the _Announcements_ list containing the announcements
-3. Create the _announcement_ list
-4. In the settings:
-    - Advanced settings
-        - Enable management of content types
-        - Disable attachments
-    - Rating settings (this seems to only appear on team sites)
-        - Rating Settings: **Yes** or (No if you want to disable ratings)
-        - Which voting/rating experience you would like to enable for this list?
-            - Likes if you want to show the Thumbs icon and count
-            - Star Ratings if you want to show the 5-star rating
-    - Add from existing content types
-        - Add your previous created content type. If it doesn't show, wait for up to 4 hours
-    - Click on the default item content type
-        - delete this content type
-5. The Coulmns should look like:
+To be able to deploy the extension tenant wide without configuration, create the lists *__Announcements__*  and *__AcknowledgedAnnouncements__* on the site *__/sites/news__*
 
-    | Column | Type | Used in | Comment |
-    |--------|------|---------|---------|
-    | Body    | Multiple lines of text | Announcement Extended | |
-    | Created | Date and Time | | |
-    | Expires | Date and Time | Announcement Extended | |
-    | Modified | Date and Time | | |
-    | Number of Likes | Number of Likes | If you have/had like ratings enabled |
-    | Number of Ratings | Number of Ratings | If you have/had star ratings enabled |
-    | Owner | Person or Group | Announcement Extended | |
-    | Rating (0-5) | Rating (0-5) | | If you have/had star ratings enabled |
-    | Start Date | Date and Time | Announcement Extended | |
-    | Title | Single line of text | Announcement Extended | |
-    | Urgent | Yes/No | Announcement Extended | |
-    | URL | Hyperlink or Picture | Announcement Extended | |
-    | Created By | Person or Group | | |
-    | Modified By | Person or Group | | |
+> Upload the model package
 
-6. Create the _acknowledged_ list
-7. In the settings:
-    - Advanced settings
-        - **Read access** select `Read items that were created by the user`
-        - **Create and Edit access** select `Create items and edit items that were created by the user`
-        - Disable attachments
+1. [browse to the sharepoint app store on *YOUR-TENANT*](https://YOUR-TENANT.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx)
+2. Click **Upload**
+3. Click **Choose files**
+4. Navigate to [app\Announcements-Model-Deployment\sharepoint\solution](app\Announcements-Model-Deployment\sharepoint\solution)
+5. Select `announcements-model-deployment.sppkg` and click **Open**
+6. Add a comment and click **OK**
+7. Wait for the upload to finish and a dialog to open
+8. Click **Deploy**
+
+> Create the lists
+
+1. Open *__SiteContent__* on the site that will host the lists
+2. Click `+ New` -> `App`
+3. Locate `Announcements Bar list and content type`
+   - Click `Add`
+4. Return to *__SiteContent__*
+
+   > You see the new `Acknowledged Announcements` list
+
+5. If you already have an announcements lists go to [XYZ](XYZ)
+
+6. Click `+ New` -> `List`
+7. Enter a name for the _announcement_ list, e.g. `Announcements`
+8. Click `Create`
+
+> Add the `Announcements Extended` content-type to the _announcement_ list
+
+1. Open *__SiteContent__*
+2. Locate the _announcement_ list
+3. Click the more menu (three dots)
+   - Select `Settings`
+        - Select `Advanced settings`
+            - Enable management of content types
+            - Disable attachments
+        - `Rating settings` (this seems to only appear on team sites)
+            - Rating Settings: **Yes** or (No if you want to disable ratings)
+            - Which voting/rating experience you would like to enable for this list?
+                - Likes if you want to show the Thumbs icon and count
+                - Star Ratings if you want to show the 5-star rating
+        - `Add from existing content types`
+            - Add `Announcements Extended`
+        - Click on the default item content type (or other pre-existing)
+            - delete this content type
 
 ### Serve the extension
 
 ```shell
-git clone --recurse-submodules https://github.com/mauriora/Rateable-Announcements-Solution.git
-cd Rateable-Announcements-Solution
+git clone --recurse-submodules https://github.com/mauriora/Announcements-Bar-Spfx.git
+cd Announcements-Bar-Spfx
 yarn
 code .
 ```
 
-Edit `app\Rateable-Announcements-Extension\config\serve.json`
+Edit `app\Announcements-Bar-Extension\config\serve.json`
 
 - set *pageUrl* to the spage you want to test your extension on
 - in properties, set listname and siteurl
@@ -203,8 +210,3 @@ Then do a pull request to merge your branch into the main branch.
    - sharepoint/assets/
       - elements.xml
       - ClientSideInstance.xml
-
-## Notes
-
-
-CustomAction, ClientWebPart, ClientSideComponent, ClientSideComponentInstance, Field, ContentType, ListInstance, Module, PropertyBag
