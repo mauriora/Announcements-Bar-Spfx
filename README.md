@@ -146,11 +146,11 @@ For the likes to work, the list needs to be on a site with option to enable rati
 
         Depending on your pnp / powershell version, the `ClientSideComponentProperties` need to be escaped different:
 
-        ``Add-PnPCustomAction -Name "Mauri-Ora-Rateable-Announcements" -Title "Mauri-Ora-Rateable-Announcements" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "188a73d9-a68e-381e-4625-a5f0cf7c0024" -ClientSideComponentProperties "{ `"listName`": `"Announcements`", `"acknowledgedListName`": `"AcknowledgedAnnouncements`", `"siteUrl`": `"/sites/News`"}"``
+        ``Add-PnPCustomAction -Name "Mauri-Ora-Announcements-Bar" -Title "Mauri-Ora-Announcements-Bar" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "f4e7b2fc-be9a-43de-bb92-4a67c3f72793" -ClientSideComponentProperties "{ `"listName`": `"Announcements`", `"acknowledgedListName`": `"AcknowledgedAnnouncements`", `"siteUrl`": `"/sites/News`"}"``
 
         or
 
-        ``Add-PnPCustomAction -Name "Mauri-Ora-Rateable-Announcements" -Title "Mauri-Ora-Rateable-Announcements" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "188a73d9-a68e-381e-4625-a5f0cf7c0024" -ClientSideComponentProperties "{'listName': 'Announcements', 'acknowledgedListName': 'AcknowledgedAnnouncements', 'siteUrl': '/sites/News'}"``
+        ``Add-PnPCustomAction -Name "Mauri-Ora-Announcements-Bar" -Title "Mauri-Ora-Announcements-Bar" -Location "ClientSideExtension.ApplicationCustomizer" -ClientSideComponentId "f4e7b2fc-be9a-43de-bb92-4a67c3f72793" -ClientSideComponentProperties "{'listName': 'Announcements', 'acknowledgedListName': 'AcknowledgedAnnouncements', 'siteUrl': '/sites/News'}"``
 
         If you have issues, check the browser logs, "Announcements onInit" logs an object with an properties object containing _listName_, _acknowledgedListName_ and _siteUrl_
 
