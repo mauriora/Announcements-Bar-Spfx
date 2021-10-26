@@ -2,33 +2,83 @@
 
 ## Introduction
 
-This is an example of announcements bar in the Sharepoint, featuring out of the box features like likes.
+This is an example implementation of an announcements bar in the Sharepoint, featuring out of the box features like likes.
+Here you can:
 
-The solution is part of the [reusable hybrid repo mvc spfx examples](https://github.com/mauriora/reusable-hybrid-repo-mvc-spfx-examples).
+- [install configure go](#install-configure-go) to use the extension.
+- or read and code as part of the [reusable hybrid repo mvc spfx examples](https://github.com/mauriora/reusable-hybrid-repo-mvc-spfx-examples).
 
-This one hopefully illustrates:
-
-- create a model extended from existing SharePoint Announcements for the SharePoint access
-- use out of the box features like likes, comments
-- little specific code needed
-- deploy a list and content type
+  This one hopefully illustrates:
+  - create a model extended from existing SharePoint Announcements for the SharePoint access
+  - use out of the box features like likes, comments
+  - little specific code needed
+  - deploy a list and content type
 
 ## Table of contents
 
 1. [Getting Started](#getting-started)
-    1. [Requirements](#requirements)
+    1. [Install configure go](#install-configure-go)
     2. [Minimal path to awesomeness](#minimal-path-to-awesomeness)
 2. [Build and install](#build-and-install)
-3. [Contribute](#contribute)
-    1. [To do list](#to-do-list)
-4. [Create new project](#create-new-project)
+3. [Caveats](#caveats)
+    1. [Blank page for installation error](#blank-page-for-installation-error)
+4. [Details](#details)
+    1. [Content type](#content-type)
+5. [Contribute](#contribute)
+6. [Create new project](#create-new-project)
 
 ## Getting Started
 
-You can use the "Minimal path to awesomeness" to have look around.
+- [Install configure go](#install-configure-go) to use the extension
+- Follow the [Minimal path to awesomeness](#minimal-path-to-awesomeness) to have look around.
 You can follow the "Create a new project" to start with a copy of this a starting point for a new extension project.
 
-### Requirements
+### Install configure go
+
+> To be able to deploy the extension tenant wide without configuration, create the lists
+> *`Announcements`*  and *`AcknowledgedAnnouncements`* on the site `/sites/news`
+
+#### Deploy lists
+
+[In your sharepoint app store](https://YOUR-TENANT.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx)
+`Upload` [app/Announcements-Model-Deployment/sharepoint/solution/announcements-model-deployment.sppkg](app/Announcements-Model-Deployment/sharepoint/solution/announcements-model-deployment.sppkg)
+
+On the `site content` page of the site hosting the Announcements:
+
+1. Click `+ New` -> `App`
+   - Find `Announcements Bar list and content type`
+      - Click `Add`
+2. If you want to create a new _announcement_ list, click `+ New` -> `List`
+   1. Enter a name for the _announcement_ list
+      > strongly recommended to use `Announcements` and change the _displayed_ name later.
+   2. Click `Create`
+3. Open `Settings` for the _announcement_ list
+    - In `Advanced settings`
+        - Enable management of content types
+        - Disable attachments
+    - In `Add from existing content types`
+        - Add `Announcements Extended`
+    - Click on the default item content type (or other pre-existing)
+        - delete this content type
+    - Optional for ratings (this seems to only appear on team sites)
+        - Select `Rating settings`
+            - Rating Settings: **Yes** or (**No** if you want to disable ratings)
+            - Which voting/rating experience you would like to enable for this list?
+                - `Likes` if you want to show the Thumbs icon and count
+                - `Star Ratings` if you want to show the 5-star rating
+
+#### Deploy the bar extension
+
+[In your sharepoint app store](https://YOUR-TENANT.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx)
+`Upload` [app/Announcements-Bar-Extension/sharepoint/solution/announcements-bar.sppkg](app/Announcements-Bar-Extension/sharepoint/solution/announcements-bar.sppkg)
+
+Select [x] `Deploy tenant wide` if you used the above default settings and want the bar to appear on every modern site.
+
+### Minimal path to awesomeness
+
+[Deploy lists](#deploy-lists)
+
+#### Requirements
 
 You should have the following installed:
 
@@ -37,75 +87,7 @@ You should have the following installed:
 - yarn
 - GitExtension (the program, if your contributing or forking a new project of this)
 
-### Minimal path to awesomeness
-
-#### Create the content type
-
-![Content type hierarchy diagram](./docs/Content-Type.svg)
-
-Create a new content type as child of the builtin `Announcement`, e.g. `Announcement Extended`.
-Add from existing site columns:
-
-- Owner (`ReportOwner`)
-- Start Date (`StartDate`)
-- `URL`
-
-> `Urgent` (create as YesNo if it doesn't exist)
-
-If you can't create content-types, add the `Announcement Extended` fields manually to your list, **after** you created it with the builtin `Announcements` content type.
-If you can't find all the site columns in existing ones, then you can add them manually.
-
-#### Create the list
-
-To be able to deploy the extension tenant wide without configuration, create the lists *__Announcements__*  and *__AcknowledgedAnnouncements__* on the site *__/sites/news__*
-
-> Upload the model package
-
-1. [browse to the sharepoint app store on *YOUR-TENANT*](https://YOUR-TENANT.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx)
-2. Click **Upload**
-3. Click **Choose files**
-4. Navigate to [app\Announcements-Model-Deployment\sharepoint\solution](app\Announcements-Model-Deployment\sharepoint\solution)
-5. Select `announcements-model-deployment.sppkg` and click **Open**
-6. Add a comment and click **OK**
-7. Wait for the upload to finish and a dialog to open
-8. Click **Deploy**
-
-> Create the lists
-
-1. Open *__SiteContent__* on the site that will host the lists
-2. Click `+ New` -> `App`
-3. Locate `Announcements Bar list and content type`
-   - Click `Add`
-4. Return to *__SiteContent__*
-
-   > You see the new `Acknowledged Announcements` list
-
-5. If you already have an announcements lists go to [XYZ](XYZ)
-
-6. Click `+ New` -> `List`
-7. Enter a name for the _announcement_ list, e.g. `Announcements`
-8. Click `Create`
-
-> Add the `Announcements Extended` content-type to the _announcement_ list
-
-1. Open *__SiteContent__*
-2. Locate the _announcement_ list
-3. Click the more menu (three dots)
-   - Select `Settings`
-        - Select `Advanced settings`
-            - Enable management of content types
-            - Disable attachments
-        - `Rating settings` (this seems to only appear on team sites)
-            - Rating Settings: **Yes** or (No if you want to disable ratings)
-            - Which voting/rating experience you would like to enable for this list?
-                - Likes if you want to show the Thumbs icon and count
-                - Star Ratings if you want to show the 5-star rating
-        - `Add from existing content types`
-            - Add `Announcements Extended`
-        - Click on the default item content type (or other pre-existing)
-            - delete this content type
-
-### Serve the extension
+#### Serve the extension
 
 ```shell
 git clone --recurse-submodules https://github.com/mauriora/Announcements-Bar-Spfx.git
@@ -167,7 +149,7 @@ For the likes to work, the list needs to be on a site with option to enable rati
 
 ### Blank page for installation error
 
-To see installation errors, go to `Site content` using the `classic experience`.
+To see the installation errors, go to `Site content` using the `classic experience`.
 Locate the failed package and:
 
 - click the more menu (`...`)
@@ -183,9 +165,15 @@ If you see a blank page, open `PowerShell` with `pnp` and execute:
     Set-PnPTenantSite -Identity "https://<YOURTENANT>.sharepoint.com/sites/<YOURSITE>" -DenyAddAndCustomizePages:$false
 ```
 
+## Details
+
+### Content type hierarchy
+
+![Content type hierarchy diagram](./docs/Content-Type.svg)
+
 ## Contribute
 
-Use the minmal path to awesomeness and please create a branch for your contribution.
+Use the minmal path to awesomeness and please create a fork and branch for your contribution.
 Then do a pull request to merge your branch into the main branch.
 
 ## Create new project
@@ -195,8 +183,7 @@ Then do a pull request to merge your branch into the main branch.
 3. Fork the starting app project as *YOUR-PROJECT*
 4. Add the *YOUR-PROJECT* as submodule to *YOUR-SOLUTION* using the app GitExtenson, manage sub modules
 5. Remove the starting project, and any other you don't need, from YOUR-solution using the app GitExtenson, manage sub modules
-6. call `yarn initguids` in apps/*YOUR-PROJECT*
-6.a replace guids in server.json, elements.xml and  clientsideinstances.xml
+6. call `yarn generateNewGuidsResetVersions` in apps/*YOUR-PROJECT*
 7. rename *YOUR-.....* in:
     - app/*YOUR-PROJECT*
         - package.json
@@ -207,6 +194,8 @@ Then do a pull request to merge your branch into the main branch.
             - package-solution.json
         - sharepoint/assets/*
 8. Copy the *id* value from *YOUR-EXTENSION*.manifest.json as *componentId*, and the *alias* value as *title*  to
+   - config
+      - serve.json
    - sharepoint/assets/
       - elements.xml
       - ClientSideInstance.xml
