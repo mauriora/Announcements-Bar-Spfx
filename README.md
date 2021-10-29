@@ -17,13 +17,13 @@ Here you can:
 ## Table of contents
 
 1. [Getting Started](#getting-started)
-    1. [Install configure go](#install-configure-go)
-    2. [Minimal path to awesomeness](#minimal-path-to-awesomeness)
+   1. [Install configure go](#install-configure-go)
+   2. [Minimal path to awesomeness](#minimal-path-to-awesomeness)
 2. [Build and install](#build-and-install)
 3. [Caveats](#caveats)
-    1. [Blank page for installation error](#blank-page-for-installation-error)
+   1. [Blank page for installation error](#blank-page-for-installation-error)
 4. [Details](#details)
-    1. [Content type](#content-type)
+   1. [Content type](#content-type)
 5. [Contribute](#contribute)
 6. [Create new project](#create-new-project)
 

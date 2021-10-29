@@ -1,30 +1,6 @@
-[submodule "shared/Controller-SharePoint-List"]
-	path = shared/Controller-SharePoint-List
-	url = https://github.com/mauriora/Controller-SharePoint-List.git
-	branch = main
-[submodule "shared/Utils-SPFx-Controls-React"]
-	path = shared/Utils-SPFx-Controls-React
-	url = https://github.com/mauriora/Utils-SPFx-Controls-React.git
-	branch = main
 [submodule "shared/Model-Announcement-Extended"]
 	path = shared/Model-Announcement-Extended
 	url = https://github.com/mauriora/Model-Announcement-Extended.git
-	branch = main
-[submodule "shared/Spfx-Packaging"]
-	path = shared/Spfx-Packaging
-	url = https://github.com/mauriora/Spfx-Packaging.git
-	branch = main
-[submodule "shared/Package-Tools"]
-	path = shared/Package-Tools
-	url = https://github.com/mauriora/Package-Tools.git
-	branch = main
-[submodule "shared/eslint-config-react"]
-	path = shared/eslint-config-react
-	url = https://github.com/mauriora/eslint-config-react.git
-	branch = main
-[submodule "shared/eslint-config-ts"]
-	path = shared/eslint-config-ts
-	url = https://github.com/mauriora/eslint-config-ts.git
 	branch = main
 [submodule "app/Announcements-Bar-Extension"]
 	path = app/Announcements-Bar-Extension
