@@ -808,9 +808,9 @@
     tslib "^2.1.0"
 
 "@fluentui/react@^8.16.0":
-  version "8.37.5"
-  resolved "https://registry.yarnpkg.com/@fluentui/react/-/react-8.37.5.tgz#b249306116feb5f1cc58bd849850f86911e2c402"
-  integrity sha512-DK2xx7TuNFXGy/NOYm5gjG+sHAcoQgP+79/ly9AzcSE5eWJjqvUOyLfQ9XMw1aTAca1HqIYD8IxmJKw05EloKg==
+  version "8.37.6"
+  resolved "https://registry.yarnpkg.com/@fluentui/react/-/react-8.37.6.tgz#7fcc2ad32e4deb014ab7fdcfb8d9fe19ed818881"
+  integrity sha512-yxoZF64Yw41an9r9OltY4di+AKxqno5vshkAjYx8kDTlDIP4eTBc4ze8cfgEf5eOCChe3X9BW0XUHxXIAwQrag==
   dependencies:
     "@fluentui/date-time-utilities" "^8.2.2"
     "@fluentui/font-icons-mdl2" "^8.1.14"
@@ -1159,18 +1159,6 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@mauriora/controller-sharepoint-list@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@mauriora/controller-sharepoint-list/-/controller-sharepoint-list-0.1.1.tgz#dfc1c78d4e43e23b35f2b776e4d4ebe7492c75bc"
-  integrity sha512-rt4pvHLW+YV9EWkCAexQLuaajNx459L9dS5TZuPecnSLmJ2ayN0T2KS348CzeSkyItqvRrqD/qJgdXHtDmoe7w==
-  dependencies:
-    "@microsoft/sp-http" "1.12.1"
-    "@pnp/graph" "2.9.0"
-    "@pnp/sp" "2.9.0"
-    class-transformer "^0.4.0"
-    mobx "^6.1.8"
-    reflect-metadata "^0.1.13"
-
 "@mauriora/eslint-config-react@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@mauriora/eslint-config-react/-/eslint-config-react-0.0.1.tgz#f0f093e803a9fc890c560274101331b1e96b0678"
@@ -1203,21 +1191,6 @@
     ts-node "^10.3.0"
     typescript "^4.4.4"
     versiony "^2.0.1"
-
-"@mauriora/utils-spfx-controls-react@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@mauriora/utils-spfx-controls-react/-/utils-spfx-controls-react-0.1.0.tgz#0a090296fe93308d7f92cc70822e9afb2a5b8421"
-  integrity sha512-jsRFtP1PXFDIKjJj2VEiaVNaNuVQc0r8namVMTKuPxoqrNBK4hvDFKubwdELLawrvqWnoP7iLjKFX32mk+9Upw==
-  dependencies:
-    "@fluentui/react" "^8.16.0"
-    "@fluentui/theme" "^2.4.1"
-    "@mauriora/controller-sharepoint-list" "0.1.1"
-    "@microsoft/sp-lodash-subset" "1.12.1"
-    "@pnp/sp" "2.9.0"
-    "@pnp/spfx-controls-react" "3.3.0"
-    class-transformer "^0.4.0"
-    mobx "^6.1.8"
-    mobx-react-lite "^3.2.0"
 
 "@microsoft/api-extractor-model@7.13.2":
   version "7.13.2"
@@ -2507,6 +2480,11 @@
     "@types/undertaker" "*"
     "@types/vinyl-fs" "*"
     chokidar "^2.1.2"
+
+"@types/he@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@types/he/-/he-1.1.2.tgz#0c8b275f36d2b8b651104638e4d45693349c3953"
+  integrity sha512-kSJPcLO1x+oolc0R89pUl2kozldQ/fVQ1C1p5mp8fPoLdF/ZcBvckaTC2M8xXh3GYendXvCpy5m/a2eSbfgNgw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.3"
@@ -9585,9 +9563,9 @@ loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3:
     json5 "^1.0.1"
 
 loader-utils@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.0.tgz#e4cace5b816d425a166b5f097e10cd12b36064b0"
-  integrity sha512-rP4F0h2RaWSvPEkD7BLDFQnvSf+nK+wr3ESUjNTyAGobqrijmW92zc+SO6d4p4B1wh7+B/Jg1mkQe5NYUEHtHQ==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.1.tgz#3b8d4386f42378d6434d32d7bc08e7a52d39575e"
+  integrity sha512-g4miPa9uUrZz4iElkaVJgDFwKJGh8aQGM7pUL4ejXl6cu7kSb30seQOVGNMP6sW8j7DW77X68hJZ+GM7UGhXeQ==
   dependencies:
     big.js "^5.2.2"
     emojis-list "^3.0.0"

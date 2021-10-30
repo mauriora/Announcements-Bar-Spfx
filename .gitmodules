@@ -10,7 +10,15 @@
 	path = app/Announcements-Model-Deployment
 	url = https://github.com/mauriora/Announcements-Model-Deployment.git
 	branch = main
+[submodule "shared/Controller-SharePoint-List"]
+	path = shared/Controller-SharePoint-List
+	url = https://github.com/mauriora/Controller-SharePoint-List.git
+	branch = main
 [submodule "shared/Model-Announcement-Extended"]
 	path = shared/Model-Announcement-Extended
 	url = https://github.com/mauriora/Model-Announcement-Extended.git
 	branch = main
+[submodule "shared/Utils-SPFx-Controls-React"]
+	path = shared/Utils-SPFx-Controls-React
+	url = https://github.com/mauriora/Utils-SPFx-Controls-React.git
+	branch = Announcements-Bar
