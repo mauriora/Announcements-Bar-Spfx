@@ -22,3 +22,15 @@
 	path = shared/Utils-SPFx-Controls-React
 	url = https://github.com/mauriora/Utils-SPFx-Controls-React.git
 	branch = Announcements-Bar
+[submodule "shared/Package-Tools"]
+	path = shared/Package-Tools
+	url = https://github.com/mauriora/Package-Tools.git
+	branch = main
+[submodule "shared/Spfx-Packaging"]
+	path = shared/Spfx-Packaging
+	url = https://github.com/mauriora/Spfx-Packaging.git
+	branch = main
+[submodule "shared/workspace-tools"]
+	path = shared/workspace-tools
+	url = https://github.com/mauriora/workspace-tools.git
+	branch = main

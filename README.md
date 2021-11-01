@@ -154,24 +154,26 @@ You should have the following installed:
 - yarn
 - GitExtension (the program, if your contributing or forking a new project of this)
 
-### Serve the extension
+### Install the workspace
 
 ```shell
 git clone --recurse-submodules https://github.com/mauriora/Announcements-Bar-Spfx.git
 cd Announcements-Bar-Spfx
-yarn
+yarn boot
+lerna run build
 code .
 ```
 
-Edit `app\Announcements-Bar-Extension\config\serve.json`
+### Serve the extension
 
-- set *pageUrl* to the spage you want to test your extension on
-- in properties, set listname and siteurl
+Edit [app\Announcements-Bar-Extension/config/serve.json](app/Announcements-Bar-Extension/config/serve.json)
+
+- set *pageUrl* to the page you want to test your extension on
+- in properties, set siteurl to the [Hosting site](#hosting-site)
 
 open a terminal in the solution (root) folder
 
 ```shell
-yarn build-shared
 yarn serve
 ```
 
@@ -179,7 +181,7 @@ a browser will open and navigate to *pageUrl*
 
 ### Build and install
 
-1. In a solution terminal execute `yarn build-release`
+1. In a solution terminal execute `lerna run build`
 2. Either [Install & go](#install--go) or [Install customized](#install-customized)
 
 ## Caveats
@@ -203,6 +205,23 @@ If you see a blank page, open `PowerShell` with `pnp` and execute:
 ```
 
 ## Details
+
+## Submodules
+
+Depending on the stage or kind of your development, you may not want to download and build all submodules.
+You can `unloadModules` wich are published.
+
+You could also [Install the workspace](#install-the-workspace) by cloning the solution and loading only the modules you need:
+
+```shell
+git clone https://github.com/mauriora/Announcements-Bar-Spfx.git
+cd Announcements-Bar-Spfx
+yarn boot
+yarn loadModules .\app\Announcements-Bar-Extension\ .\app\Announcements-Lists-Deployment\
+lerna run build
+```
+
+### Load or unload submodules
 
 ### Content type hierarchy
 

@@ -1,21 +1,26 @@
 {
     "name": "@mauriora/announcements-bar-spfx",
-    "version": "0.1.1",
-    "repository": {
-        "url": "https://github.com/mauriora/Announcements-Bar-Spfx.git"
-    },
+    "version": "0.1.2",
+    "repository": "https://github.com/mauriora/Announcements-Bar-Spfx.git",
     "private": true,
     "workspaces": [
         "shared/**",
         "app/**"
     ],
     "scripts": {
+        "serve": "yarn workspace @mauriora/announcements-bar-extension serve",
+        "boot": "yarn global add lerna && lerna bootstrap",
         "clean-node-modules": "rimraf ./shared/*/node_modules && rimraf app/*/node_modules && rimraf yarn.lock && rimraf ./node_modules",
         "clean-node-modules-az": "rimraf yarn.lock && yarn clean-node-modules"
     },
     "devDependencies": {
+        "@mauriora/workspace-tools": "0.0.1",
+        "lerna": "^4.0.0",
         "rimraf": "^3.0.2",
         "yarn": "^1.0.0"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "main": "index.js",
+    "author": "denniskuhn <dennis@kuhn.geek.nz>",
+    "license": "MIT"
 }
