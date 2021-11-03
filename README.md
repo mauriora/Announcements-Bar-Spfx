@@ -2,6 +2,8 @@
 
 ![Preview](./docs/preview.png)
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+
 ## Overview
 
 This is an announcements bar for Sharepoint, featuring comments, likes, ratings.
