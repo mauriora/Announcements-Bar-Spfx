@@ -1847,6 +1847,30 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@mauriora/controller-sharepoint-list@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@mauriora/controller-sharepoint-list/-/controller-sharepoint-list-0.1.1.tgz#dfc1c78d4e43e23b35f2b776e4d4ebe7492c75bc"
+  integrity sha512-rt4pvHLW+YV9EWkCAexQLuaajNx459L9dS5TZuPecnSLmJ2ayN0T2KS348CzeSkyItqvRrqD/qJgdXHtDmoe7w==
+  dependencies:
+    "@microsoft/sp-http" "1.12.1"
+    "@pnp/graph" "2.9.0"
+    "@pnp/sp" "2.9.0"
+    class-transformer "^0.4.0"
+    mobx "^6.1.8"
+    reflect-metadata "^0.1.13"
+
+"@mauriora/controller-sharepoint-list@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@mauriora/controller-sharepoint-list/-/controller-sharepoint-list-0.1.2.tgz#3b6b45fca1985ed345c559b35c0994f9a067d226"
+  integrity sha512-ZT0qN+C8a3PZvtXje5JwKHf85bx+Ap3EvrO9Ti7a236MkV50K6IDjmHW/UK/al7J1unM4KM8lPKrfM3j7LiaCA==
+  dependencies:
+    "@microsoft/sp-http" "1.12.1"
+    "@pnp/graph" "2.9.0"
+    "@pnp/sp" "2.9.0"
+    class-transformer "^0.4.0"
+    mobx "^6.1.8"
+    reflect-metadata "^0.1.13"
+
 "@mauriora/eslint-config-react@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@mauriora/eslint-config-react/-/eslint-config-react-0.0.1.tgz#f0f093e803a9fc890c560274101331b1e96b0678"
@@ -1857,10 +1881,52 @@
   resolved "https://registry.yarnpkg.com/@mauriora/eslint-config-ts/-/eslint-config-ts-0.0.1.tgz#1f342e61f3e6d9d2ef6f9d24c582653a82948dd5"
   integrity sha512-XwKjaGqMhVAqf3z1BK6Uqsaya7pZfGvHN1XtjhOiXPiONmBe9C1VIIs9GRdXfh4H9ryI2JgGLKHFAAmWWPkWyw==
 
+"@mauriora/model-announcement-extended@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@mauriora/model-announcement-extended/-/model-announcement-extended-0.0.3.tgz#463ffa0e7acffaab3c9b0b650fbfe9067e275bfa"
+  integrity sha512-H8LG+rUKEXvnEXbbJwmnM5UhQuVqPqm1x1KDZIe9XCOqM7+rl4enb+Ot0ckjSII8e9/vq5v4naWjzuzO2HqjRQ==
+  dependencies:
+    "@mauriora/controller-sharepoint-list" "0.1.1"
+    class-transformer "^0.4.0"
+    reflect-metadata "^0.1.13"
+
 "@mauriora/package-tools@0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@mauriora/package-tools/-/package-tools-0.0.1.tgz#2b49d085e6e8069073bec8bf94138c44e67ad8a4"
   integrity sha512-HfhP8Kml42RFQ2Cy6Lwr4Z3Ne36/mOBDc62XGyO/fXW1nIyBoDbeygSh2Kpyc1L6LhcUaLqyBSUqLFNe3z6Q8A==
+
+"@mauriora/spfx-packaging@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@mauriora/spfx-packaging/-/spfx-packaging-0.0.5.tgz#c86b6d248605ac41b7f60ce3e3fb9c57d55896e9"
+  integrity sha512-xe08wM1u5Wa8zQ4UFAo82jR268SRgqIHBLizq8HNa6Ke7mv05DofrH0v5UDQDA1eZa1rUJIhoR/98EquQe6MPQ==
+  dependencies:
+    "@mauriora/package-tools" "*"
+    "@sinclair/typebox" "^0.20.5"
+    "@types/minimist" "^1.2.2"
+    "@types/node" "^14.0.0"
+    ajv "^8.6.3"
+    ajv-formats "^2.1.1"
+    better-ajv-errors "^0.7.0"
+    chalk "^4.1.2"
+    minimist "^1.2.5"
+    ts-node "^10.3.0"
+    typescript "^4.4.4"
+    versiony "^2.0.1"
+
+"@mauriora/utils-spfx-controls-react@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@mauriora/utils-spfx-controls-react/-/utils-spfx-controls-react-0.1.0.tgz#0a090296fe93308d7f92cc70822e9afb2a5b8421"
+  integrity sha512-jsRFtP1PXFDIKjJj2VEiaVNaNuVQc0r8namVMTKuPxoqrNBK4hvDFKubwdELLawrvqWnoP7iLjKFX32mk+9Upw==
+  dependencies:
+    "@fluentui/react" "^8.16.0"
+    "@fluentui/theme" "^2.4.1"
+    "@mauriora/controller-sharepoint-list" "0.1.1"
+    "@microsoft/sp-lodash-subset" "1.12.1"
+    "@pnp/sp" "2.9.0"
+    "@pnp/spfx-controls-react" "3.3.0"
+    class-transformer "^0.4.0"
+    mobx "^6.1.8"
+    mobx-react-lite "^3.2.0"
 
 "@microsoft/api-extractor-model@7.13.2":
   version "7.13.2"
