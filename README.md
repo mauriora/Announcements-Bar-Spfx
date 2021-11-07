@@ -25,13 +25,13 @@ Here you can follow:
 1. [Install & go](#install--go)
 2. [Install customized](#install-customized)
 3. [Minimal path to awesomeness](#minimal-path-to-awesomeness)
-2. [Build and install](#build-and-install)
-3. [Caveats](#caveats)
+4. [Build and install](#build-and-install)
+5. [Caveats](#caveats)
    1. [Blank page for installation error](#blank-page-for-installation-error)
-4. [Details](#details)
+6. [Details](#details)
    1. [Content type](#content-type)
-5. [Contribute](#contribute)
-6. [Create new project](#create-new-project)
+7. [Contribute](#contribute)
+8. [Create new project](#create-new-project)
 
 ## Install & go
 
