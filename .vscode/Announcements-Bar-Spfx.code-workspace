@@ -10,5 +10,9 @@
 			"path": "..\\node_modules\\@lerna\\publish"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"NODE_OPTIONS": "--preserve-symlinks"
+		}	
+	}
 }
