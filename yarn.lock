@@ -1862,6 +1862,11 @@
   resolved "https://registry.yarnpkg.com/@mauriora/package-tools/-/package-tools-0.0.1.tgz#2b49d085e6e8069073bec8bf94138c44e67ad8a4"
   integrity sha512-HfhP8Kml42RFQ2Cy6Lwr4Z3Ne36/mOBDc62XGyO/fXW1nIyBoDbeygSh2Kpyc1L6LhcUaLqyBSUqLFNe3z6Q8A==
 
+"@mauriora/package-tools@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@mauriora/package-tools/-/package-tools-0.0.4.tgz#8d1311aefa6a11ed47bd3c1ce40e715e2c4e661f"
+  integrity sha512-eELH9e+v+o4vela5+ivVFjK9bjCXwkAAHsoeFI2zpY1/i85/6Cpy6pk0NOIlHDGv0qXZF0aOueDTn53jU4r9kg==
+
 "@mauriora/workspace-tools@^0.0.4":
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/@mauriora/workspace-tools/-/workspace-tools-0.0.10.tgz#e4736bddb5b2ceb424cfb31c87e1cd755d7d374c"
