@@ -2,7 +2,7 @@
     "name": "@mauriora/announcements-bar-spfx",
     "version": "0.1.4",
     "repository": "https://github.com/mauriora/Announcements-Bar-Spfx.git",
-    "private": true,
+    "private": false,
     "workspaces": [
         "shared/**",
         "app/**"

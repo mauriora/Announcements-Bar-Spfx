@@ -26,13 +26,13 @@
             ]
         },
         {
-            "name": "lerna version",
+            "name": "lerna publish",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/lerna/cli.js",
             "stopOnEntry": true,
             "args": [
-                "version",
+                "publish",
                 "patch"
             ],
             "cwd": "${workspaceRoot}",
