@@ -38,3 +38,7 @@
 	path = shared/lerna
 	url = https://github.com/mauriora/lerna.git
 	branch = git-modules
+[submodule "shared/microsoft-gulp-core-build"]
+	path = shared/microsoft-gulp-core-build
+	url = https://github.com/mauriora/microsoft-gulp-core-build.git
+	branch = main
