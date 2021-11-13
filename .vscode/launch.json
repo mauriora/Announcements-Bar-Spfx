@@ -30,7 +30,7 @@
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/lerna/cli.js",
-            "stopOnEntry": true,
+            "stopOnEntry": false,
             "args": [
                 "publish",
                 "patch"
