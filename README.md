@@ -10,7 +10,7 @@ This is an announcements bar for Sharepoint, featuring comments, likes, ratings.
 
 Here you can follow:
 
-- **[install and go](#install-go)** to quickly use the extension.
+- **[install & go](#install-go)** to quickly use the extension.
 - **[install customized](#install-customized)** to use the extension with a customized setup.
 - or read and code as part of the [reusable hybrid repo mvc spfx examples](https://github.com/mauriora/reusable-hybrid-repo-mvc-spfx-examples).
 
