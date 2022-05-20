@@ -15,6 +15,7 @@
     },
     "devDependencies": {
         "@mauriora/workspace-tools": "^0.0.4",
+        "@yarnpkg/pnpify": "^4.0.0-rc.6",
         "lerna": "^4.0.0",
         "rimraf": "^3.0.2",
         "yarn": "^1.0.0"

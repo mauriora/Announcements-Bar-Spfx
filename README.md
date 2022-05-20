@@ -257,3 +257,10 @@ Then do a pull request to merge your branch into the main branch.
    - sharepoint/assets/
       - elements.xml
       - ClientSideInstance.xml
+
+## Yarn 2
+
+`yarn plugin import typescript`
+
+es6-promise
+`yarn dlx @yarnpkg/sdks vscode`
