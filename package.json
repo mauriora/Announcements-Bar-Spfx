@@ -24,5 +24,6 @@
     },
     "main": "index.js",
     "author": "denniskuhn <dennis@kuhn.geek.nz>",
-    "license": "MIT"
+    "license": "MIT",
+    "packageManager": "yarn@3.2.1"
 }
