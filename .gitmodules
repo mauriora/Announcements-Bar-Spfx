@@ -34,3 +34,7 @@
 	path = shared/workspace-tools
 	url = https://github.com/mauriora/workspace-tools.git
 	branch = main
+[submodule "shared/SimpleProcess"]
+	path = shared/SimpleProcess
+	url = https://github.com/mauriora/SimpleProcess.git
+	branch = main
