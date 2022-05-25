@@ -1845,8 +1845,8 @@ __metadata:
     "@microsoft/microsoft-graph-types": ^2.20.0
     "@microsoft/sp-component-base": 1.12.1
     "@microsoft/sp-http": 1.12.1
-    "@pnp/graph": 2.9.0
-    "@pnp/sp": 2.9.0
+    "@pnp/graph": 2.13.0
+    "@pnp/sp": 2.13.0
     "@pnp/spfx-controls-react": 3.3.0
     "@types/es6-promise": ^3.3.0
     "@types/webpack-env": 1.17.0
@@ -1995,7 +1995,7 @@ __metadata:
     "@mauriora/spfx-packaging": ^0.0.17
     "@microsoft/sp-component-base": 1.12.1
     "@microsoft/sp-lodash-subset": 1.12.1
-    "@pnp/sp": 2.9.0
+    "@pnp/sp": 2.13.0
     "@pnp/spfx-controls-react": 3.3.0
     "@types/react": 16.9.36
     "@types/react-dom": 16.9.16
@@ -2304,17 +2304,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/microsoft-graph-types@npm:^2.20.0":
+"@microsoft/microsoft-graph-types@npm:^2.13.0, @microsoft/microsoft-graph-types@npm:^2.20.0":
   version: 2.20.0
   resolution: "@microsoft/microsoft-graph-types@npm:2.20.0"
   checksum: 5a16f82a4b443983e1700736982b1317de03feeb55f45fd7b1e7b86b1c5525df63b1f3c5462c02feca37540ad6781a54eb7892a308b300663ff8c133a7f0feff
-  languageName: node
-  linkType: hard
-
-"@microsoft/microsoft-graph-types@npm:^2.6.0":
-  version: 2.9.0
-  resolution: "@microsoft/microsoft-graph-types@npm:2.9.0"
-  checksum: 84e7fb41e6f688c4f2f6072aaabeb555f6db2b9c47b7614201d25620d3c9c69b8eca8a51c9481433ea027ee2c00c3fbfdb3bd744e52674719fc321f7e4f55e07
   languageName: node
   linkType: hard
 
@@ -2912,6 +2905,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pnp/common@npm:2.13.0":
+  version: 2.13.0
+  resolution: "@pnp/common@npm:2.13.0"
+  dependencies:
+    tslib: 2.3.0
+  checksum: b9e4b25dec0ff27cf8e9b5ddb127c41d0f0c44b09f8d6e4e831289d23de0a30f9ec47f97f8aefae74d3c6bb3cfe54ec4a1b4052704724320ae475c17de579afb
+  languageName: node
+  linkType: hard
+
 "@pnp/common@npm:2.5.0":
   version: 2.5.0
   resolution: "@pnp/common@npm:2.5.0"
@@ -2930,16 +2932,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnp/graph@npm:2.9.0":
-  version: 2.9.0
-  resolution: "@pnp/graph@npm:2.9.0"
+"@pnp/graph@npm:2.13.0":
+  version: 2.13.0
+  resolution: "@pnp/graph@npm:2.13.0"
   dependencies:
-    "@microsoft/microsoft-graph-types": ^2.6.0
-    "@pnp/common": 2.9.0
-    "@pnp/logging": 2.9.0
-    "@pnp/odata": 2.9.0
+    "@microsoft/microsoft-graph-types": ^2.13.0
+    "@pnp/common": 2.13.0
+    "@pnp/logging": 2.13.0
+    "@pnp/odata": 2.13.0
     tslib: 2.3.0
-  checksum: 0b50d4938490d5d1dd93de6f00b97fc40d1549ef9ccb521adb396c3f8f3aedf0e46b4d289d9e7506274f490920b878eba67a727e8967dbcca3db54cb980cf033
+  checksum: 4c46954e886f92076323843d38a50160530a2ef2b7dd582c091649312d4fc442acda37c1048770ed69ec7649764bc54c98f836f9f75c841e03bebb36b8b430a8
+  languageName: node
+  linkType: hard
+
+"@pnp/logging@npm:2.13.0":
+  version: 2.13.0
+  resolution: "@pnp/logging@npm:2.13.0"
+  dependencies:
+    tslib: 2.3.0
+  checksum: 6ed7630484b0d20acee2f7df77a0f763d13749820acf15a5b6fe3e8f8128a3c52f823f327bd2b3680c219ef9cdc9a262b30823c9a279c39555a89f0144752dd1
   languageName: node
   linkType: hard
 
@@ -2958,6 +2969,17 @@ __metadata:
   dependencies:
     tslib: 2.3.0
   checksum: fb60c9457a596ebc3629c6e54abc96f4ac74248506a038a89abfbd7d1763f551971847942e07857f49a46d612cb6debd43b52707613b67027b51e28c1c3e396c
+  languageName: node
+  linkType: hard
+
+"@pnp/odata@npm:2.13.0":
+  version: 2.13.0
+  resolution: "@pnp/odata@npm:2.13.0"
+  dependencies:
+    "@pnp/common": 2.13.0
+    "@pnp/logging": 2.13.0
+    tslib: 2.3.0
+  checksum: d7b901565c026be53c47618d6558497cc8c9dfd93ba387eaa5fcdde099a3c137c33297e31445fb0a0db93d586e79a7413d05079dda5740b0d47c678d78be1177
   languageName: node
   linkType: hard
 
@@ -2980,6 +3002,18 @@ __metadata:
     "@pnp/logging": 2.9.0
     tslib: 2.3.0
   checksum: 11783e0d5bf4fbe1e74c663fb05eefc052d47a0a0b5aaa4bd045d499626e60bbf265dc62eb0aa087ed7d95d03a14f5fe35c0e1a586516e62350e3bf4727040fa
+  languageName: node
+  linkType: hard
+
+"@pnp/sp@npm:2.13.0":
+  version: 2.13.0
+  resolution: "@pnp/sp@npm:2.13.0"
+  dependencies:
+    "@pnp/common": 2.13.0
+    "@pnp/logging": 2.13.0
+    "@pnp/odata": 2.13.0
+    tslib: 2.3.0
+  checksum: 5d61f7937ab8fb6d09db61daf60769f7a0e5a181203178efd14a09a4539d753b5613cfa9a6cbc609e7a239bf2b5dfa7ba3a43ad6f7edfb1f106be66efb5b0361
   languageName: node
   linkType: hard
 
