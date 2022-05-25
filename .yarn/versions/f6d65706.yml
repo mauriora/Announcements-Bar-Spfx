@@ -1,13 +1,5 @@
-releases:
-  "@mauriora/announcements-bar-spfx": patch
-  "@mauriora/announcements-lists-deployment": patch
-  "@mauriora/announcements-model-deployment": patch
-  "@mauriora/controller-sharepoint-list": patch
-  "@mauriora/spfx-packaging": patch
-  "@mauriora/utils-spfx-controls-react": patch
-
 undecided:
-  - "@mauriora/announcements-bar-extension"
   - "@mauriora/model-announcement-extended"
   - "@mauriora/simpleprocess"
+  - "@mauriora/spfx-packaging"
   - "@mauriora/workspace-tools"
