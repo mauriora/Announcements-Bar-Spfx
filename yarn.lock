@@ -1842,7 +1842,7 @@ __metadata:
   dependencies:
     "@mauriora/eslint-config-ts": 0.0.1
     "@mauriora/package-tools": ^0.0.10
-    "@microsoft/microsoft-graph-types": ^2.6.0
+    "@microsoft/microsoft-graph-types": ^2.20.0
     "@microsoft/sp-component-base": 1.12.1
     "@microsoft/sp-http": 1.12.1
     "@pnp/graph": 2.9.0
@@ -2301,6 +2301,13 @@ __metadata:
   version: 1.41.0
   resolution: "@microsoft/microsoft-graph-types@npm:1.41.0"
   checksum: 54011469ad2c96e8515302d7ec3f66efb5c77dc086a4d41109635d98017d5d145dd86bb5fb0be97d8f8ee11f92c4897644ded58ee41f77e7749ebd7fd476f744
+  languageName: node
+  linkType: hard
+
+"@microsoft/microsoft-graph-types@npm:^2.20.0":
+  version: 2.20.0
+  resolution: "@microsoft/microsoft-graph-types@npm:2.20.0"
+  checksum: 5a16f82a4b443983e1700736982b1317de03feeb55f45fd7b1e7b86b1c5525df63b1f3c5462c02feca37540ad6781a54eb7892a308b300663ff8c133a7f0feff
   languageName: node
   linkType: hard
 
