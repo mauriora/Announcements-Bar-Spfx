@@ -153,7 +153,7 @@ You should have the following installed:
 
 - Code editor
 - Node 14
-- yarn
+- yarn 2+
 - GitExtension (the program, if your contributing or forking a new project of this)
 
 ### Install the workspace
@@ -161,8 +161,8 @@ You should have the following installed:
 ```shell
 git clone --recurse-submodules https://github.com/mauriora/Announcements-Bar-Spfx.git
 cd Announcements-Bar-Spfx
-yarn boot
-lerna run build
+yarn install
+yarn build
 code .
 ```
 
@@ -183,7 +183,7 @@ a browser will open and navigate to *pageUrl*
 
 ### Build and install
 
-1. In a solution terminal execute `lerna run build`
+1. In a solution terminal execute `yarn build`
 2. Either [Install & go](#install--go) or [Install customized](#install-customized)
 
 ## Caveats
@@ -218,9 +218,9 @@ You could also [Install the workspace](#install-the-workspace) by cloning the so
 ```shell
 git clone https://github.com/mauriora/Announcements-Bar-Spfx.git
 cd Announcements-Bar-Spfx
-yarn boot
+yarn install
 yarn loadModules .\app\Announcements-Bar-Extension\ .\app\Announcements-Lists-Deployment\
-lerna run build
+yarn build
 ```
 
 ### Load or unload submodules
