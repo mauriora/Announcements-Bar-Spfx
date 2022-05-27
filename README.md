@@ -186,6 +186,28 @@ a browser will open and navigate to *pageUrl*
 1. In a solution terminal execute `yarn build`
 2. Either [Install & go](#install--go) or [Install customized](#install-customized)
 
+### Debug
+
+Before you can serve the extension, a debug-build needs to be installed. The first time you debug using `serve` the local developer certificate needs to be trusted.
+
+#### One time trust dev cert
+
+In [app/Announcements-Bar-Extension](app/Announcements-Bar-Extension) execute in a terminal:
+
+```shell
+    yarn run trust-dev-cert
+```
+
+#### Debug build
+The debug build basically uploads only the manifest, the code will be loaded from the local machine wich is running `serve`.
+In [app/Announcements-Bar-Extension](app/Announcements-Bar-Extension) execute in a terminal:
+
+```shell
+    yarn run build-debug
+```
+
+Either [Install & go](#install--go) or [Install customized](#install-customized)
+
 ## Caveats
 
 ### Blank page for installation error

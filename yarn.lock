@@ -1760,12 +1760,12 @@ __metadata:
   dependencies:
     "@eslint/eslintrc": ^1.3.0
     "@fluentui/react": ^8.69.0
-    "@mauriora/controller-sharepoint-list": ^0.1.10
+    "@mauriora/controller-sharepoint-list": ^0.2.1
     "@mauriora/eslint-config-react": 0.0.1
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/model-announcement-extended": ^0.0.11
-    "@mauriora/spfx-packaging": ^0.0.17
-    "@mauriora/utils-spfx-controls-react": ^0.1.29
+    "@mauriora/model-announcement-extended": ^0.1.0
+    "@mauriora/spfx-packaging": ^0.1.0
+    "@mauriora/utils-spfx-controls-react": ^0.2.1
     "@microsoft/sp-application-base": 1.14.0
     "@microsoft/sp-build-web": 1.14.0
     "@microsoft/sp-core-library": 1.14.0
@@ -1794,7 +1794,7 @@ __metadata:
   resolution: "@mauriora/announcements-bar-spfx@workspace:."
   dependencies:
     "@mauriora/package-tools": ^0.0.10
-    "@mauriora/workspace-tools": ^0.0.4
+    "@mauriora/workspace-tools": ^0.1.0
     rimraf: ^3.0.2
     yarn: ^1.0.0
   languageName: unknown
@@ -1804,8 +1804,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mauriora/announcements-lists-deployment@workspace:app/Announcements-Lists-Deployment"
   dependencies:
-    "@mauriora/model-announcement-extended": ^0.0.11
-    "@mauriora/spfx-packaging": ^0.0.17
+    "@mauriora/model-announcement-extended": ^0.1.0
+    "@mauriora/spfx-packaging": ^0.1.0
     "@microsoft/sp-build-web": 1.14.0
     gulp: ^4.0.2
   languageName: unknown
@@ -1815,14 +1815,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mauriora/announcements-model-deployment@workspace:app/Announcements-Model-Deployment"
   dependencies:
-    "@mauriora/model-announcement-extended": ^0.0.11
-    "@mauriora/spfx-packaging": ^0.0.17
+    "@mauriora/model-announcement-extended": ^0.1.0
+    "@mauriora/spfx-packaging": ^0.1.0
     "@microsoft/sp-build-web": 1.14.0
     gulp: ^4.0.2
   languageName: unknown
   linkType: soft
 
-"@mauriora/controller-sharepoint-list@^0.1.10, @mauriora/controller-sharepoint-list@workspace:shared/Controller-SharePoint-List":
+"@mauriora/controller-sharepoint-list@^0.2.1, @mauriora/controller-sharepoint-list@workspace:shared/Controller-SharePoint-List":
   version: 0.0.0-use.local
   resolution: "@mauriora/controller-sharepoint-list@workspace:shared/Controller-SharePoint-List"
   dependencies:
@@ -1831,8 +1831,9 @@ __metadata:
     "@microsoft/microsoft-graph-types": ^2.20.0
     "@microsoft/sp-component-base": 1.14.0
     "@microsoft/sp-http": 1.14.0
-    "@pnp/graph": 2.13.0
-    "@pnp/sp": 2.13.0
+    "@pnp/graph": 3.3.2
+    "@pnp/logging": ^3.3.2
+    "@pnp/sp": 3.3.2
     "@pnp/spfx-controls-react": 3.8.0
     "@types/es6-promise": ^3.3.0
     "@types/webpack-env": 1.17.0
@@ -1872,11 +1873,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mauriora/model-announcement-extended@^0.0.11, @mauriora/model-announcement-extended@workspace:shared/Model-Announcement-Extended":
+"@mauriora/model-announcement-extended@^0.1.0, @mauriora/model-announcement-extended@workspace:shared/Model-Announcement-Extended":
   version: 0.0.0-use.local
   resolution: "@mauriora/model-announcement-extended@workspace:shared/Model-Announcement-Extended"
   dependencies:
-    "@mauriora/controller-sharepoint-list": ^0.1.10
+    "@mauriora/controller-sharepoint-list": ^0.2.1
     "@mauriora/eslint-config-ts": 0.0.1
     "@mauriora/package-tools": ^0.0.10
     "@types/webpack-env": 1.17.0
@@ -1913,7 +1914,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mauriora/spfx-packaging@^0.0.17, @mauriora/spfx-packaging@workspace:shared/Spfx-Packaging":
+"@mauriora/spfx-packaging@^0.1.0, @mauriora/spfx-packaging@workspace:shared/Spfx-Packaging":
   version: 0.0.0-use.local
   resolution: "@mauriora/spfx-packaging@workspace:shared/Spfx-Packaging"
   dependencies:
@@ -1945,22 +1946,23 @@ __metadata:
     publishPackage: ./bin/publishPackage
     servePackage: ./bin/servePackage
     syncVersions: ./bin/syncVersions
+    trustDevCert: ./bin/trustDevCert
   languageName: unknown
   linkType: soft
 
-"@mauriora/utils-spfx-controls-react@^0.1.29, @mauriora/utils-spfx-controls-react@workspace:shared/Utils-SPFx-Controls-React":
+"@mauriora/utils-spfx-controls-react@^0.2.1, @mauriora/utils-spfx-controls-react@workspace:shared/Utils-SPFx-Controls-React":
   version: 0.0.0-use.local
   resolution: "@mauriora/utils-spfx-controls-react@workspace:shared/Utils-SPFx-Controls-React"
   dependencies:
     "@fluentui/react": ^8.69.0
     "@fluentui/theme": ^2.6.6
-    "@mauriora/controller-sharepoint-list": ^0.1.10
+    "@mauriora/controller-sharepoint-list": ^0.2.1
     "@mauriora/eslint-config-react": 0.0.1
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/spfx-packaging": ^0.0.17
+    "@mauriora/spfx-packaging": ^0.1.0
     "@microsoft/sp-component-base": 1.14.0
     "@microsoft/sp-lodash-subset": 1.14.0
-    "@pnp/sp": 2.13.0
+    "@pnp/sp": 3.3.2
     "@pnp/spfx-controls-react": 3.8.0
     "@types/react": 16.9.36
     "@types/react-dom": 16.9.16
@@ -1980,7 +1982,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mauriora/workspace-tools@^0.0.4, @mauriora/workspace-tools@workspace:shared/workspace-tools":
+"@mauriora/workspace-tools@^0.1.0, @mauriora/workspace-tools@workspace:shared/workspace-tools":
   version: 0.0.0-use.local
   resolution: "@mauriora/workspace-tools@workspace:shared/workspace-tools"
   dependencies:
@@ -2324,7 +2326,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/microsoft-graph-types@npm:^2.0.0, @microsoft/microsoft-graph-types@npm:^2.13.0, @microsoft/microsoft-graph-types@npm:^2.20.0":
+"@microsoft/microsoft-graph-types@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@microsoft/microsoft-graph-types@npm:2.16.0"
+  checksum: 9fcd492076c6fba985dbf2ea1e7730134a5696bf6487e2a44cc059d3ab19b73635e4c829092e560cb00fb654419deeebe1901ef4f5bffa62e26c8cdd86e008fb
+  languageName: node
+  linkType: hard
+
+"@microsoft/microsoft-graph-types@npm:^2.0.0, @microsoft/microsoft-graph-types@npm:^2.20.0":
   version: 2.20.0
   resolution: "@microsoft/microsoft-graph-types@npm:2.20.0"
   checksum: 5a16f82a4b443983e1700736982b1317de03feeb55f45fd7b1e7b86b1c5525df63b1f3c5462c02feca37540ad6781a54eb7892a308b300663ff8c133a7f0feff
@@ -3005,15 +3014,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnp/common@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@pnp/common@npm:2.13.0"
-  dependencies:
-    tslib: 2.3.0
-  checksum: b9e4b25dec0ff27cf8e9b5ddb127c41d0f0c44b09f8d6e4e831289d23de0a30f9ec47f97f8aefae74d3c6bb3cfe54ec4a1b4052704724320ae475c17de579afb
-  languageName: node
-  linkType: hard
-
 "@pnp/common@npm:2.5.0":
   version: 2.5.0
   resolution: "@pnp/common@npm:2.5.0"
@@ -3023,25 +3023,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnp/graph@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@pnp/graph@npm:2.13.0"
+"@pnp/core@npm:3.3.2":
+  version: 3.3.2
+  resolution: "@pnp/core@npm:3.3.2"
   dependencies:
-    "@microsoft/microsoft-graph-types": ^2.13.0
-    "@pnp/common": 2.13.0
-    "@pnp/logging": 2.13.0
-    "@pnp/odata": 2.13.0
-    tslib: 2.3.0
-  checksum: 4c46954e886f92076323843d38a50160530a2ef2b7dd582c091649312d4fc442acda37c1048770ed69ec7649764bc54c98f836f9f75c841e03bebb36b8b430a8
+    tslib: 2.3.1
+  checksum: 0e4a6859367131322aa4e7d625d52f8bc9f0e946f778c6cc9f10dd8470d4116fb1af7193e8106306655048c75c676d86b195fa0b4cf72b450cec6220c292ab68
   languageName: node
   linkType: hard
 
-"@pnp/logging@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@pnp/logging@npm:2.13.0"
+"@pnp/graph@npm:3.3.2":
+  version: 3.3.2
+  resolution: "@pnp/graph@npm:3.3.2"
   dependencies:
-    tslib: 2.3.0
-  checksum: 6ed7630484b0d20acee2f7df77a0f763d13749820acf15a5b6fe3e8f8128a3c52f823f327bd2b3680c219ef9cdc9a262b30823c9a279c39555a89f0144752dd1
+    "@microsoft/microsoft-graph-types": 2.16.0
+    "@pnp/core": 3.3.2
+    "@pnp/queryable": 3.3.2
+    tslib: 2.3.1
+  checksum: 92a7237011361f1715fe03950bd2ca2a42dbda2561a54115062596beae3d9d5032b5cba9534386194d7d43a8aad2a5129cb750aba73aea998d62f5894f025280
   languageName: node
   linkType: hard
 
@@ -3054,14 +3053,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnp/odata@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@pnp/odata@npm:2.13.0"
+"@pnp/logging@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "@pnp/logging@npm:3.3.2"
   dependencies:
-    "@pnp/common": 2.13.0
-    "@pnp/logging": 2.13.0
-    tslib: 2.3.0
-  checksum: d7b901565c026be53c47618d6558497cc8c9dfd93ba387eaa5fcdde099a3c137c33297e31445fb0a0db93d586e79a7413d05079dda5740b0d47c678d78be1177
+    tslib: 2.3.1
+  checksum: 61887faff10aaa1b9b7ce8a2fddd14827ee039f75d3810331ade98facc656fd3993b63f297f41f36c0e6fc5aad353057505aaf24e9d36331d8a5eca9e389afb7
   languageName: node
   linkType: hard
 
@@ -3076,15 +3073,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnp/sp@npm:2.13.0":
-  version: 2.13.0
-  resolution: "@pnp/sp@npm:2.13.0"
+"@pnp/queryable@npm:3.3.2":
+  version: 3.3.2
+  resolution: "@pnp/queryable@npm:3.3.2"
   dependencies:
-    "@pnp/common": 2.13.0
-    "@pnp/logging": 2.13.0
-    "@pnp/odata": 2.13.0
-    tslib: 2.3.0
-  checksum: 5d61f7937ab8fb6d09db61daf60769f7a0e5a181203178efd14a09a4539d753b5613cfa9a6cbc609e7a239bf2b5dfa7ba3a43ad6f7edfb1f106be66efb5b0361
+    "@pnp/core": 3.3.2
+    tslib: 2.3.1
+  checksum: 4f5fc805670941681c415e0251955c8f6fc1f23c0385e1187e7711aacb1579e363dc7a87d9cc8064ff7b06fd54cfbe9c29ca07e7510f709d561e420c02e317be
   languageName: node
   linkType: hard
 
@@ -3097,6 +3092,17 @@ __metadata:
     "@pnp/odata": 2.5.0
     tslib: 2.2.0
   checksum: 395bcfa68aeddcdf05d4e78ee5d1665711f06fb2a4cc90f264bf3afe1f6649e16fff8485d96c29108cdaacb17b592ddf602b93fcfd3c6dba2216cd5e35a4d58a
+  languageName: node
+  linkType: hard
+
+"@pnp/sp@npm:3.3.2":
+  version: 3.3.2
+  resolution: "@pnp/sp@npm:3.3.2"
+  dependencies:
+    "@pnp/core": 3.3.2
+    "@pnp/queryable": 3.3.2
+    tslib: 2.3.1
+  checksum: 36426a49a1438949f847f23b01761ac34918334740e6184af85af6cc78c79b8c69f26fc7453217e3a0a94394c7f512816359b570643327156c2f46713711d679
   languageName: node
   linkType: hard
 
@@ -19676,10 +19682,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.3.0":
-  version: 2.3.0
-  resolution: "tslib@npm:2.3.0"
-  checksum: 8869694c26e4a7b56d449662fd54a4f9ba872c889d991202c74462bd99f10e61d5bd63199566c4284c0f742277736292a969642cc7b590f98727a7cae9529122
+"tslib@npm:2.3.1, tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.2.0":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
@@ -19687,13 +19693,6 @@ __metadata:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.2.0":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
