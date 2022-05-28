@@ -53,8 +53,6 @@ You can:
 - [Caveats](#caveats)
   - [Blank page for installation error](#blank-page-for-installation-error)
 - [Details](#details)
-- [Submodules](#submodules)
-  - [Load or unload submodules](#load-or-unload-submodules)
   - [Content type hierarchy](#content-type-hierarchy)
 - [Contribute](#contribute)
 - [Create new project](#create-new-project)
@@ -258,23 +256,6 @@ If you see a blank page, open `PowerShell` with `pnp` and execute:
 ```
 
 ## Details
-
-## Submodules
-
-Depending on the stage or kind of your development, you may not want to download and build all submodules.
-You can `unloadModules` wich are published.
-
-You could also [Install the workspace](#install-the-workspace) by cloning the solution and loading only the modules you need:
-
-```shell
-git clone https://github.com/mauriora/Announcements-Bar-Spfx.git
-cd Announcements-Bar-Spfx
-yarn install
-yarn loadModules .\app\Announcements-Bar-Extension\ .\app\Announcements-Lists-Deployment\
-yarn build
-```
-
-### Load or unload submodules
 
 ### Content type hierarchy
 
