@@ -38,3 +38,7 @@
 	path = shared/SimpleProcess
 	url = https://github.com/mauriora/SimpleProcess.git
 	branch = main
+[submodule "shared/minimist-better-ajv-errors-cli"]
+	path = shared/minimist-better-ajv-errors-cli
+	url = https://github.com/mauriora/minimist-better-ajv-errors-cli.git
+	branch = main
