@@ -1767,12 +1767,12 @@ __metadata:
   dependencies:
     "@eslint/eslintrc": ^1.3.0
     "@fluentui/react": ^8.69.0
-    "@mauriora/controller-sharepoint-list": ^0.2.2
+    "@mauriora/controller-sharepoint-list": ^0.2.3
     "@mauriora/eslint-config-react": 0.0.1
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/model-announcement-extended": ^0.2.0
-    "@mauriora/spfx-packaging": ^0.2.0
-    "@mauriora/utils-spfx-controls-react": ^0.2.2
+    "@mauriora/model-announcement-extended": ^0.2.1
+    "@mauriora/spfx-packaging": ^0.2.1
+    "@mauriora/utils-spfx-controls-react": ^0.2.3
     "@microsoft/sp-application-base": 1.14.0
     "@microsoft/sp-build-web": 1.14.0
     "@microsoft/sp-core-library": 1.14.0
@@ -1800,8 +1800,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mauriora/announcements-bar-spfx@workspace:."
   dependencies:
-    "@mauriora/package-tools": ^0.1.0
-    "@mauriora/workspace-tools": ^0.2.0
+    "@mauriora/package-tools": ^0.1.1
+    "@mauriora/workspace-tools": ^0.2.1
     rimraf: ^3.0.2
     yarn: ^1.0.0
   languageName: unknown
@@ -1811,8 +1811,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mauriora/announcements-lists-deployment@workspace:app/Announcements-Lists-Deployment"
   dependencies:
-    "@mauriora/model-announcement-extended": ^0.2.0
-    "@mauriora/spfx-packaging": ^0.2.0
+    "@mauriora/model-announcement-extended": ^0.2.1
+    "@mauriora/spfx-packaging": ^0.2.1
     "@microsoft/sp-build-web": 1.14.0
     gulp: ^4.0.2
   languageName: unknown
@@ -1822,19 +1822,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mauriora/announcements-model-deployment@workspace:app/Announcements-Model-Deployment"
   dependencies:
-    "@mauriora/model-announcement-extended": ^0.2.0
-    "@mauriora/spfx-packaging": ^0.2.0
+    "@mauriora/model-announcement-extended": ^0.2.1
+    "@mauriora/spfx-packaging": ^0.2.1
     "@microsoft/sp-build-web": 1.14.0
     gulp: ^4.0.2
   languageName: unknown
   linkType: soft
 
-"@mauriora/controller-sharepoint-list@^0.2.2, @mauriora/controller-sharepoint-list@workspace:shared/Controller-SharePoint-List":
+"@mauriora/controller-sharepoint-list@^0.2.3, @mauriora/controller-sharepoint-list@workspace:shared/Controller-SharePoint-List":
   version: 0.0.0-use.local
   resolution: "@mauriora/controller-sharepoint-list@workspace:shared/Controller-SharePoint-List"
   dependencies:
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/package-tools": ^0.1.0
+    "@mauriora/package-tools": ^0.1.1
     "@microsoft/microsoft-graph-types": ^2.20.0
     "@microsoft/sp-component-base": 1.14.0
     "@microsoft/sp-http": 1.14.0
@@ -1847,7 +1847,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.33.0
     "@typescript-eslint/parser": ^4.33.0
     "@typescript-eslint/typescript-estree": ^4.33.0
-    class-transformer: ^0.4.0
+    class-transformer: ^0.5.1
     eslint: ^7.32.0
     mobx: ^6.6.0
     reflect-metadata: ^0.1.13
@@ -1898,25 +1898,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mauriora/model-announcement-extended@^0.2.0, @mauriora/model-announcement-extended@workspace:shared/Model-Announcement-Extended":
+"@mauriora/model-announcement-extended@^0.2.1, @mauriora/model-announcement-extended@workspace:shared/Model-Announcement-Extended":
   version: 0.0.0-use.local
   resolution: "@mauriora/model-announcement-extended@workspace:shared/Model-Announcement-Extended"
   dependencies:
-    "@mauriora/controller-sharepoint-list": ^0.2.2
+    "@mauriora/controller-sharepoint-list": ^0.2.3
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/package-tools": ^0.1.0
+    "@mauriora/package-tools": ^0.1.1
     "@types/webpack-env": 1.17.0
     "@typescript-eslint/eslint-plugin": ^4.33.0
     "@typescript-eslint/parser": ^4.33.0
     "@typescript-eslint/typescript-estree": ^4.33.0
-    class-transformer: ^0.4.0
+    class-transformer: ^0.5.1
     eslint: ^7.32.0
     reflect-metadata: ^0.1.13
     typescript: 4.2.4
   languageName: unknown
   linkType: soft
 
-"@mauriora/package-tools@^0.1.0, @mauriora/package-tools@workspace:^, @mauriora/package-tools@workspace:shared/Package-Tools":
+"@mauriora/package-tools@^0.1.1, @mauriora/package-tools@workspace:^, @mauriora/package-tools@workspace:shared/Package-Tools":
   version: 0.0.0-use.local
   resolution: "@mauriora/package-tools@workspace:shared/Package-Tools"
   languageName: unknown
@@ -1927,7 +1927,7 @@ __metadata:
   resolution: "@mauriora/simpleprocess@workspace:shared/SimpleProcess"
   dependencies:
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/package-tools": ^0.1.0
+    "@mauriora/package-tools": ^0.1.1
     "@types/es6-promise": ^3.3.0
     "@types/node": 14.18.18
     "@types/webpack-env": 1.17.0
@@ -1939,12 +1939,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mauriora/spfx-packaging@^0.2.0, @mauriora/spfx-packaging@workspace:shared/Spfx-Packaging":
+"@mauriora/spfx-packaging@^0.2.1, @mauriora/spfx-packaging@workspace:shared/Spfx-Packaging":
   version: 0.0.0-use.local
   resolution: "@mauriora/spfx-packaging@workspace:shared/Spfx-Packaging"
   dependencies:
     "@mauriora/minimist-better-ajv-errors-cli": "workspace:^"
-    "@mauriora/package-tools": ^0.1.0
+    "@mauriora/package-tools": ^0.1.1
     "@mauriora/simpleprocess": "workspace:^"
     "@microsoft/rush-stack-compiler-4.2": ^0.1.2
     "@microsoft/sp-build-web": 1.14.0
@@ -1976,16 +1976,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mauriora/utils-spfx-controls-react@^0.2.2, @mauriora/utils-spfx-controls-react@workspace:shared/Utils-SPFx-Controls-React":
+"@mauriora/utils-spfx-controls-react@^0.2.3, @mauriora/utils-spfx-controls-react@workspace:shared/Utils-SPFx-Controls-React":
   version: 0.0.0-use.local
   resolution: "@mauriora/utils-spfx-controls-react@workspace:shared/Utils-SPFx-Controls-React"
   dependencies:
     "@fluentui/react": ^8.69.0
     "@fluentui/theme": ^2.6.6
-    "@mauriora/controller-sharepoint-list": ^0.2.2
+    "@mauriora/controller-sharepoint-list": ^0.2.3
     "@mauriora/eslint-config-react": 0.0.1
     "@mauriora/eslint-config-ts": 0.0.1
-    "@mauriora/spfx-packaging": ^0.2.0
+    "@mauriora/spfx-packaging": ^0.2.1
     "@microsoft/sp-component-base": 1.14.0
     "@microsoft/sp-lodash-subset": 1.14.0
     "@pnp/sp": 3.3.2
@@ -1996,7 +1996,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.33.0
     "@typescript-eslint/parser": ^4.33.0
     "@typescript-eslint/typescript-estree": ^4.33.0
-    class-transformer: ^0.4.0
+    class-transformer: ^0.5.1
     eslint: ^7.32.0
     eslint-plugin-react: ^7.30.0
     mobx: ^6.6.0
@@ -2008,12 +2008,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mauriora/workspace-tools@^0.2.0, @mauriora/workspace-tools@workspace:shared/workspace-tools":
+"@mauriora/workspace-tools@^0.2.1, @mauriora/workspace-tools@workspace:shared/workspace-tools":
   version: 0.0.0-use.local
   resolution: "@mauriora/workspace-tools@workspace:shared/workspace-tools"
   dependencies:
     "@mauriora/minimist-better-ajv-errors-cli": "workspace:^"
-    "@mauriora/package-tools": ^0.1.0
+    "@mauriora/package-tools": ^0.1.1
     "@sinclair/typebox": ^0.23.5
     "@types/minimist": ^1.2.2
     "@types/node": ^14.18.18
@@ -6863,10 +6863,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-transformer@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "class-transformer@npm:0.4.0"
-  checksum: 4057346b512705b1a5a68025b025a5be1ff847d7e0e76e82bbb937f832cf6235c5f66e874487d4bd35d67401411e8a3279c9d36bdd8c800336d5507ee6e94af0
+"class-transformer@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "class-transformer@npm:0.5.1"
+  checksum: f191c8b4cc4239990f5efdd790cabdd852c243ed66248e39f6616a349c910c6eed2d9fd1fbf7ee6ea89f69b4f1d0b493b27347fe0cd0ae26b47c3745a805b6d3
   languageName: node
   linkType: hard
 
