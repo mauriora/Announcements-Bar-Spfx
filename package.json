@@ -9,6 +9,7 @@
     ],
     "scripts": {
         "build": "yarn workspaces foreach --verbose --topological --parallel --interlaced run build",
+        "rebuild": "yarn workspaces foreach --verbose --topological --interlaced run rebuild",
         "serve": "yarn workspace @mauriora/announcements-bar-extension serve",
         "version": "yarn version check --interactive && yarn version apply --all && yarn workspaces foreach --verbose --topological --parallel run version",
         "clean-node-modules": "rimraf ./shared/*/node_modules && rimraf app/*/node_modules && rimraf ./node_modules",
