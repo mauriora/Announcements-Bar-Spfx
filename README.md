@@ -1,14 +1,21 @@
 # Announcements bar Sharepoint extension
 
 ![Preview](./docs/preview.png)
-
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Fluent UI React 8.69.0](https://img.shields.io/badge/Fluent%20UI%20React-8.69.0-green.svg)](https://github.com/microsoft/fluentui/blob/master/packages/react/README.md)
+[![Mobx 6.6.0](https://img.shields.io/badge/MobX-6.6.0-green.svg)](https://mobx.js.org/)
+[![Node.js v14](https://img.shields.io/badge/Node.js-v14-yellow.svg)](https://nodejs.org/en/download/releases/)
+[![PnPjs 3.15.0](https://img.shields.io/badge/PnPjs-3.3.2-green.svg)](https://pnp.github.io/pnpjs/)
+[![SharePoint Online](https://img.shields.io/badge/SharePoint-Online-yellow.svg)](https://docs.microsoft.com/en-us/sharepoint/introduction)
+[![SPFx 1.15.0](https://img.shields.io/badge/SPFx-1.15.0-green.svg)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
+[![SPFx React Controls 3.8.0](https://img.shields.io/badge/SPFx%20React%20Controls-3.8.0-green.svg)](https://pnp.github.io/sp-dev-fx-controls-react/)
+[![Workbench Hosted: Does not work with local workbench](https://img.shields.io/badge/Workbench-Hosted-yellow.svg "Does not work with local workbench")](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-in-vscode#debug-web-part-solution-using-hosted-workbench)
+[![Yarn 3.2.1](https://img.shields.io/badge/Yarn-3.2.1-green.svg)](https://yarnpkg.com/)
 
 ## Overview
 
 This is an announcements bar for Sharepoint, featuring comments, likes, ratings.
 
-Here you can follow:
+You can:
 
 - **[install & go](#install--go)** to quickly use the extension.
 - **[install customized](#install-customized)** to use the extension with a customized setup.
@@ -22,16 +29,32 @@ Here you can follow:
 
 ## Table of contents
 
-1. [Install & go](#install--go)
-2. [Install customized](#install-customized)
-3. [Minimal path to awesomeness](#minimal-path-to-awesomeness)
-4. [Build and install](#build-and-install)
-5. [Caveats](#caveats)
-   1. [Blank page for installation error](#blank-page-for-installation-error)
-6. [Details](#details)
-   1. [Content type](#content-type)
-7. [Contribute](#contribute)
-8. [Create new project](#create-new-project)
+- [Overview](#overview)
+- [Table of contents](#table-of-contents)
+- [Install & go](#install--go)
+- [Install customized](#install-customized)
+  - [Changing the list or site name](#changing-the-list-or-site-name)
+  - [Upload to the app store](#upload-to-the-app-store)
+    - [Lists and content types deployment](#lists-and-content-types-deployment)
+    - [Announcements Bar](#announcements-bar)
+  - [Hosting site](#hosting-site)
+  - [Install the deployment package](#install-the-deployment-package)
+    - [Extend an existing announcements list](#extend-an-existing-announcements-list)
+    - [Deploy the bar extension](#deploy-the-bar-extension)
+  - [Use Powershell to change listname or site name](#use-powershell-to-change-listname-or-site-name)
+- [Minimal path to awesomeness](#minimal-path-to-awesomeness)
+  - [Requirements](#requirements)
+  - [Install the workspace](#install-the-workspace)
+  - [Serve the extension](#serve-the-extension)
+  - [Build and install](#build-and-install)
+  - [Debug](#debug)
+    - [One time trust dev cert](#one-time-trust-dev-cert)
+    - [Debug build](#debug-build)
+- [Caveats](#caveats)
+  - [Blank page for installation error](#blank-page-for-installation-error)
+- [Content type hierarchy](#content-type-hierarchy)
+- [Contribute](#contribute)
+- [Create new project](#create-new-project)
 
 ## Install & go
 
@@ -102,7 +125,7 @@ On the `site content` page of the site hosting the Announcements:
 
 Follow this if you've chosen the `Announcements Bar model` deployment package.
 
-Open `Settings` for the _announcement_ list
+Open `Settings` for the *announcement* list
 
 - In `Advanced settings`
   - Enable management of content types
@@ -131,7 +154,7 @@ Select [x] `Deploy tenant wide` if you used the above default settings and want 
 If you didn't host Announcements on `sites/news`, and or used different names for the lists, then you need to open PowerShell to add the extension to each site:
 
 1. `Connect-PnPOnline -Url https://YOUR-TENANT.sharepoint.com/sites/YourSite`
-2. Modify the `{'listName': 'Announcements', 'acknowledgedListName': 'AcknowledgedAnnouncements', 'siteUrl': '/sites/News'}` to point to your site containing your announcements _announcement_ list and _acknowledged_ list from earlier:
+2. Modify the `{'listName': 'Announcements', 'acknowledgedListName': 'AcknowledgedAnnouncements', 'siteUrl': '/sites/News'}` to point to your site containing your announcements *announcement* list and *acknowledged* list from earlier:
 
     Depending on your pnp / powershell version, the `ClientSideComponentProperties` need to be escaped different:
 
@@ -168,6 +191,8 @@ code .
 
 ### Serve the extension
 
+Initially, please follow the steps in [Debug](Debug) first. Then:
+
 Edit [app\Announcements-Bar-Extension/config/serve.json](app/Announcements-Bar-Extension/config/serve.json)
 
 - set *pageUrl* to the page you want to test your extension on
@@ -185,6 +210,29 @@ a browser will open and navigate to *pageUrl*
 
 1. In a solution terminal execute `yarn build`
 2. Either [Install & go](#install--go) or [Install customized](#install-customized)
+
+### Debug
+
+Before you can serve the extension, a debug-build needs to be installed. The first time you debug using `serve` the local developer certificate needs to be trusted.
+
+#### One time trust dev cert
+
+In [app/Announcements-Bar-Extension](app/Announcements-Bar-Extension) execute in a terminal:
+
+```shell
+    yarn run trust-dev-cert
+```
+
+#### Debug build
+
+The debug build basically uploads only the manifest, the code will be loaded from the local machine wich is running `serve`.
+In [app/Announcements-Bar-Extension](app/Announcements-Bar-Extension) execute in a terminal:
+
+```shell
+    yarn run build-debug
+```
+
+Either [Install & go](#install--go) or [Install customized](#install-customized)
 
 ## Caveats
 
@@ -206,26 +254,7 @@ If you see a blank page, open `PowerShell` with `pnp` and execute:
     Set-PnPTenantSite -Identity "https://<YOURTENANT>.sharepoint.com/sites/<YOURSITE>" -DenyAddAndCustomizePages:$false
 ```
 
-## Details
-
-## Submodules
-
-Depending on the stage or kind of your development, you may not want to download and build all submodules.
-You can `unloadModules` wich are published.
-
-You could also [Install the workspace](#install-the-workspace) by cloning the solution and loading only the modules you need:
-
-```shell
-git clone https://github.com/mauriora/Announcements-Bar-Spfx.git
-cd Announcements-Bar-Spfx
-yarn install
-yarn loadModules .\app\Announcements-Bar-Extension\ .\app\Announcements-Lists-Deployment\
-yarn build
-```
-
-### Load or unload submodules
-
-### Content type hierarchy
+## Content type hierarchy
 
 ![Content type hierarchy diagram](./docs/Content-Type.svg)
 

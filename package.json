@@ -1,6 +1,6 @@
 {
     "name": "@mauriora/announcements-bar-spfx",
-    "version": "0.1.4",
+    "version": "0.3.4",
     "repository": "https://github.com/mauriora/Announcements-Bar-Spfx.git",
     "private": true,
     "workspaces": [
@@ -8,18 +8,17 @@
         "app/**"
     ],
     "scripts": {
-        "build": "yarn workspaces foreach --verbose --topological --parallel run build",
+        "build": "yarn workspaces foreach --verbose --topological --parallel --interlaced run build",
+        "rebuild": "yarn workspaces foreach --verbose --topological --interlaced run rebuild",
         "serve": "yarn workspace @mauriora/announcements-bar-extension serve",
+        "version": "yarn version check --interactive && yarn version apply --all && yarn workspaces foreach --verbose --topological --parallel run version",
         "clean-node-modules": "rimraf ./shared/*/node_modules && rimraf app/*/node_modules && rimraf ./node_modules",
         "clean-node-modules-az": "rimraf yarn.lock && yarn clean-node-modules"
     },
     "devDependencies": {
-        "@mauriora/workspace-tools": "^0.0.4",
+        "@mauriora/workspace-tools": "^0.2.4",
         "rimraf": "^3.0.2",
         "yarn": "^1.0.0"
-    },
-    "dependencies": {
-        "@mauriora/package-tools": "^0.0.10"
     },
     "main": "index.js",
     "author": "denniskuhn <dennis@kuhn.geek.nz>",
