@@ -1,0 +1,41 @@
+<mxfile host="65bd71144e">
+    <diagram id="ZtXdAX3__U-BmebPtQ2E" name="Page-1">
+        <mxGraphModel dx="1567" dy="2311" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; margin-left: 10px ; text-align: left&quot;&gt;&lt;b&gt;Annountsments bar SPFx&lt;/b&gt;&lt;/p&gt;" style="html=1;strokeWidth=1;shape=mxgraph.sysml.package;html=1;overflow=fill;whiteSpace=wrap;labelX=166;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="-5" width="590" height="285" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="shared" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="40" width="230" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Controller-SharePoint-List" style="html=1;" vertex="1" parent="3">
+                    <mxGeometry width="160" height="30" relative="1" as="geometry">
+                        <mxPoint x="10" y="50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="Model-Announcement-Extended" style="html=1;" vertex="1" parent="3">
+                    <mxGeometry x="10" y="100" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Utils-SPFx-Controls-React" style="html=1;" vertex="1" parent="3">
+                    <mxGeometry x="10" y="150" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="app" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=1;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="20" width="280" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Announcements-Bar-Extension" style="html=1;" vertex="1" parent="5">
+                    <mxGeometry width="210" height="30" relative="1" as="geometry">
+                        <mxPoint x="20" y="50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Announcements-Lists-Deployment" style="html=1;" vertex="1" parent="5">
+                    <mxGeometry x="19" y="100" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Announcements-Model-Deployment" style="html=1;" vertex="1" parent="5">
+                    <mxGeometry x="19" y="150" width="210" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

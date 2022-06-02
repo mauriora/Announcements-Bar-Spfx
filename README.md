@@ -6,7 +6,7 @@
 [![Node.js v14](https://img.shields.io/badge/Node.js-v14-yellow.svg)](https://nodejs.org/en/download/releases/)
 [![PnPjs 3.15.0](https://img.shields.io/badge/PnPjs-3.3.2-green.svg)](https://pnp.github.io/pnpjs/)
 [![SharePoint Online](https://img.shields.io/badge/SharePoint-Online-yellow.svg)](https://docs.microsoft.com/en-us/sharepoint/introduction)
-[![SPFx 1.15.0](https://img.shields.io/badge/SPFx-1.15.0-green.svg)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
+[![SPFx 1.14.0](https://img.shields.io/badge/SPFx-1.14.0-green.svg)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
 [![SPFx React Controls 3.8.0](https://img.shields.io/badge/SPFx%20React%20Controls-3.8.0-green.svg)](https://pnp.github.io/sp-dev-fx-controls-react/)
 [![Workbench Hosted: Does not work with local workbench](https://img.shields.io/badge/Workbench-Hosted-yellow.svg "Does not work with local workbench")](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-in-vscode#debug-web-part-solution-using-hosted-workbench)
 [![Yarn 3.2.1](https://img.shields.io/badge/Yarn-3.2.1-green.svg)](https://yarnpkg.com/)
@@ -52,7 +52,11 @@ You can:
     - [Debug build](#debug-build)
 - [Caveats](#caveats)
   - [Blank page for installation error](#blank-page-for-installation-error)
-- [Content type hierarchy](#content-type-hierarchy)
+- [Content](#content)
+  - [Modules](#modules)
+  - [Apps](#apps)
+    - [Shared](#shared)
+  - [Content type hierarchy](#content-type-hierarchy)
 - [Contribute](#contribute)
 - [Create new project](#create-new-project)
 
@@ -225,7 +229,7 @@ In [app/Announcements-Bar-Extension](app/Announcements-Bar-Extension) execute in
 
 #### Debug build
 
-The debug build basically uploads only the manifest, the code will be loaded from the local machine wich is running `serve`.
+The debug build basically uploads only the manifest, the code will be loaded from the local machine which is running `serve`.
 In [app/Announcements-Bar-Extension](app/Announcements-Bar-Extension) execute in a terminal:
 
 ```shell
@@ -245,7 +249,7 @@ Locate the failed package and:
 - Click `DETAILS`
 - In the `Errors` section
   - Click on the number to the right of `Install Errors`
-  - A baloon popup should appear showing the error(s)
+  - A balloon popup should appear showing the error(s)
 
 If you see a blank page, open `PowerShell` with `pnp` and execute:
 
@@ -254,13 +258,34 @@ If you see a blank page, open `PowerShell` with `pnp` and execute:
     Set-PnPTenantSite -Identity "https://<YOURTENANT>.sharepoint.com/sites/<YOURSITE>" -DenyAddAndCustomizePages:$false
 ```
 
-## Content type hierarchy
+## Content
+
+### Modules
+
+![Modules](./docs/Modules.svg)
+
+### Apps
+
+These are the actual "outputs" `.sppkg`.
+
+`Announcements-Bar-Extension` is the visible react extension, either installed tenant wide or per site.
+
+`Announcements-Lists-Deployment` is the extended announcements list package usually deployed on one site per tenant.
+
+`Announcements-Model-Deployment` is the deployment of just the content type, if you want to extend an existing Announcements list.
+
+#### Shared
+
+These modules usually change during the cause of development. It might be that they are completely re-used and not modified at all. The hybrid repro structure makes it easy to quickly enhance commonly used modules.
+`Model-Announcement-Extended` has been created with this project, but could be used in others as well.
+
+### Content type hierarchy
 
 ![Content type hierarchy diagram](./docs/Content-Type.svg)
 
 ## Contribute
 
-Use the minmal path to awesomeness and please create a fork and branch for your contribution.
+Use the minimal path to awesomeness and please create a fork and branch for your contribution.
 Then do a pull request to merge your branch into the main branch.
 
 ## Create new project
@@ -268,8 +293,8 @@ Then do a pull request to merge your branch into the main branch.
 1. Fork the solution as *YOUR-SOLUTION*
 2. Clone the forked solution
 3. Fork the starting app project as *YOUR-PROJECT*
-4. Add the *YOUR-PROJECT* as submodule to *YOUR-SOLUTION* using the app GitExtenson, manage sub modules
-5. Remove the starting project, and any other you don't need, from YOUR-solution using the app GitExtenson, manage sub modules
+4. Add the *YOUR-PROJECT* as submodule to *YOUR-SOLUTION* using the app GitExtension, manage sub modules
+5. Remove the starting project, and any other you don't need, from YOUR-solution using the app GitExtension, manage sub modules
 6. call `yarn generateNewGuidsResetVersions` in apps/*YOUR-PROJECT*
 7. rename *YOUR-.....* in:
     - app/*YOUR-PROJECT*
