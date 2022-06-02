@@ -2,8 +2,8 @@
 
 ![Preview](./docs/preview.png)
 [![Fluent UI React 8.69.0](https://img.shields.io/badge/Fluent%20UI%20React-8.69.0-green.svg)](https://github.com/microsoft/fluentui/blob/master/packages/react/README.md)
-[![Mobx 6.1.8](https://img.shields.io/badge/MobX-6.1.8-yellow.svg)](https://mobx.js.org/)
-[![Node.js v14](https://img.shields.io/badge/Node.js-v14-orange.svg)](https://nodejs.org/en/download/releases/)
+[![Mobx 6.6.0](https://img.shields.io/badge/MobX-6.6.0-green.svg)](https://mobx.js.org/)
+[![Node.js v14](https://img.shields.io/badge/Node.js-v14-yellow.svg)](https://nodejs.org/en/download/releases/)
 [![PnPjs 3.15.0](https://img.shields.io/badge/PnPjs-3.3.2-green.svg)](https://pnp.github.io/pnpjs/)
 [![SharePoint Online](https://img.shields.io/badge/SharePoint-Online-yellow.svg)](https://docs.microsoft.com/en-us/sharepoint/introduction)
 [![SPFx 1.15.0](https://img.shields.io/badge/SPFx-1.15.0-green.svg)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
@@ -52,8 +52,7 @@ You can:
     - [Debug build](#debug-build)
 - [Caveats](#caveats)
   - [Blank page for installation error](#blank-page-for-installation-error)
-- [Details](#details)
-  - [Content type hierarchy](#content-type-hierarchy)
+- [Content type hierarchy](#content-type-hierarchy)
 - [Contribute](#contribute)
 - [Create new project](#create-new-project)
 
@@ -255,9 +254,7 @@ If you see a blank page, open `PowerShell` with `pnp` and execute:
     Set-PnPTenantSite -Identity "https://<YOURTENANT>.sharepoint.com/sites/<YOURSITE>" -DenyAddAndCustomizePages:$false
 ```
 
-## Details
-
-### Content type hierarchy
+## Content type hierarchy
 
 ![Content type hierarchy diagram](./docs/Content-Type.svg)
 
