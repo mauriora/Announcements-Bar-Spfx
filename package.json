@@ -20,9 +20,6 @@
         "rimraf": "^3.0.2",
         "yarn": "^1.0.0"
     },
-    "dependencies": {
-        "@mauriora/package-tools": "^0.1.1"
-    },
     "main": "index.js",
     "author": "denniskuhn <dennis@kuhn.geek.nz>",
     "license": "MIT",
