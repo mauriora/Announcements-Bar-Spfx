@@ -1800,7 +1800,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mauriora/announcements-bar-spfx@workspace:."
   dependencies:
-    "@mauriora/package-tools": ^0.1.1
     "@mauriora/workspace-tools": ^0.2.2
     rimraf: ^3.0.2
     yarn: ^1.0.0
@@ -1840,7 +1839,7 @@ __metadata:
     "@microsoft/sp-http": 1.14.0
     "@pnp/graph": 3.3.2
     "@pnp/logging": ^3.3.2
-    "@pnp/sp": 3.3.2
+    "@pnp/sp": 3.3.2-v3nightly.20220601
     "@pnp/spfx-controls-react": 3.8.0
     "@types/es6-promise": ^3.3.0
     "@types/webpack-env": 1.17.0
@@ -1988,7 +1987,7 @@ __metadata:
     "@mauriora/spfx-packaging": ^0.2.2
     "@microsoft/sp-component-base": 1.14.0
     "@microsoft/sp-lodash-subset": 1.14.0
-    "@pnp/sp": 3.3.2
+    "@pnp/sp": 3.3.2-v3nightly.20220601
     "@pnp/spfx-controls-react": 3.8.0
     "@types/react": 16.9.36
     "@types/react-dom": 16.9.16
@@ -3059,6 +3058,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pnp/core@npm:3.3.2-v3nightly.20220601":
+  version: 3.3.2-v3nightly.20220601
+  resolution: "@pnp/core@npm:3.3.2-v3nightly.20220601"
+  dependencies:
+    tslib: 2.4.0
+  checksum: 68344ae8d7bb4279bbea5e9beae9e082a4c6210101f6f1a1b50507ba3d7c29ed515197106cc7a947bf2f374ddc003f141e874e26d27eecde31a9de0e447afbdf
+  languageName: node
+  linkType: hard
+
 "@pnp/graph@npm:3.3.2":
   version: 3.3.2
   resolution: "@pnp/graph@npm:3.3.2"
@@ -3110,6 +3118,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pnp/queryable@npm:3.3.2-v3nightly.20220601":
+  version: 3.3.2-v3nightly.20220601
+  resolution: "@pnp/queryable@npm:3.3.2-v3nightly.20220601"
+  dependencies:
+    "@pnp/core": 3.3.2-v3nightly.20220601
+    tslib: 2.4.0
+  checksum: b6731b79445c08961005dea765d19362094f3c7e359bca6a9cbbd237700a830749bf969f8ccf14a9b2927abc4dbda1be97a6de209c9f00d015f29c78976aa7ef
+  languageName: node
+  linkType: hard
+
 "@pnp/sp@npm:2.5.0":
   version: 2.5.0
   resolution: "@pnp/sp@npm:2.5.0"
@@ -3122,14 +3140,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pnp/sp@npm:3.3.2":
-  version: 3.3.2
-  resolution: "@pnp/sp@npm:3.3.2"
+"@pnp/sp@npm:3.3.2-v3nightly.20220601":
+  version: 3.3.2-v3nightly.20220601
+  resolution: "@pnp/sp@npm:3.3.2-v3nightly.20220601"
   dependencies:
-    "@pnp/core": 3.3.2
-    "@pnp/queryable": 3.3.2
-    tslib: 2.3.1
-  checksum: 36426a49a1438949f847f23b01761ac34918334740e6184af85af6cc78c79b8c69f26fc7453217e3a0a94394c7f512816359b570643327156c2f46713711d679
+    "@pnp/core": 3.3.2-v3nightly.20220601
+    "@pnp/queryable": 3.3.2-v3nightly.20220601
+    tslib: 2.4.0
+  checksum: 0c7598455aa66d6669b9e3f6a84de08313163db34092336fff4612d92bc80c213ffcc047e4399d314806647e46c7f6a44ecde6b2c8c628b974d362225c1184c0
   languageName: node
   linkType: hard
 
@@ -19697,6 +19715,13 @@ __metadata:
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
+"tslib@npm:2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
   languageName: node
   linkType: hard
 
